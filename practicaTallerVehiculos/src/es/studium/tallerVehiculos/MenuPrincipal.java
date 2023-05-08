@@ -15,12 +15,13 @@ import java.awt.event.WindowListener;
 public class MenuPrincipal implements WindowListener, ActionListener
 {
 	// --- General components ---
-	Frame windowPrincipal = new Frame("MenÃº Principal");
+	Frame windowPrincipal = new Frame("Menú Principal");
 	MenuBar barraMenu = new MenuBar();
 
 	// --- Main menus ---
 	Menu menuClientes = new Menu("Clientes");
 	Menu menuServicios = new Menu("Servicios");
+	Menu menuRealizan = new Menu("Realizan");
 
 	// --- Menu items for "Clientes" ---
 	MenuItem menuClientesNuevo = new MenuItem("Nuevo");
@@ -33,6 +34,12 @@ public class MenuPrincipal implements WindowListener, ActionListener
 	MenuItem menuServiciosListado = new MenuItem("Listado");
 	MenuItem menuServiciosBaja = new MenuItem("Baja");
 	MenuItem menuServiciosModificar = new MenuItem("Modificar");
+
+	// --- Menu items for "Realizan" ---
+	MenuItem menuRealizanNuevo = new MenuItem("Nuevo");
+	MenuItem menuRealizanListado = new MenuItem("Listado");
+	MenuItem menuRealizanBaja = new MenuItem("Baja");
+	MenuItem menuRealizanModificar = new MenuItem("Modificar");
 
 	// --- Create a variable to store the type of user ---
 	int tipoUsuario;
@@ -75,6 +82,12 @@ public class MenuPrincipal implements WindowListener, ActionListener
 		menuServiciosBaja.addActionListener(this);
 		menuServiciosModificar.addActionListener(this);
 
+		// --- Add an action listener to each menu item for "Realizan" ---
+		menuRealizanNuevo.addActionListener(this);
+		menuRealizanListado.addActionListener(this);
+		menuRealizanBaja.addActionListener(this);
+		menuRealizanModificar.addActionListener(this);
+
 		// --- Add menu items to their corresponding menus ---
 		// If I want to disable them: menuClientesListado.setEnabled(false);
 		menuClientes.add(menuClientesNuevo);
@@ -97,6 +110,16 @@ public class MenuPrincipal implements WindowListener, ActionListener
 		}
 		barraMenu.add(menuServicios);
 
+		menuRealizan.add(menuRealizanNuevo);
+		if(tipoUsuario==1)
+		{
+			menuRealizan.addSeparator();
+			menuRealizan.add(menuRealizanListado);
+			menuRealizan.add(menuRealizanBaja);
+			menuRealizan.add(menuRealizanModificar);
+		}
+		barraMenu.add(menuRealizan);
+		
 		// --- Set window visible --- 
 		windowPrincipal.setVisible(true); 
 	}
@@ -160,6 +183,26 @@ public class MenuPrincipal implements WindowListener, ActionListener
 		{
 			new ModificarServicio(user);
 			conexion.logs("[+] " +user, " has opened 'Modificar Servicio' window.");
+		}
+		else if (evento.getSource().equals(menuRealizanNuevo)) 
+		{
+			//new ...
+			//conexion.logs("[+] " +user, " has opened '...' window.");
+		}
+		else if (evento.getSource().equals(menuRealizanListado)) 
+		{
+			//new ...
+			//conexion.logs("[+] " +user, " has opened '...' window.");
+		}
+		else if (evento.getSource().equals(menuRealizanBaja)) 
+		{
+			//new ...
+			//conexion.logs("[+] " +user, " has opened '...' window.");
+		}
+		else if (evento.getSource().equals(menuRealizanModificar)) 
+		{
+			//new ...
+			//conexion.logs("[+] " +user, " has opened '...' window.");
 		}
 	}
 }

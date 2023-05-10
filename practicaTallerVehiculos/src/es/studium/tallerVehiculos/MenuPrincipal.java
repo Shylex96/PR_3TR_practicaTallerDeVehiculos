@@ -1,21 +1,27 @@
 package es.studium.tallerVehiculos;
 
-import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.Menu;
 import java.awt.MenuBar;
 import java.awt.MenuItem;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 
-public class MenuPrincipal implements WindowListener, ActionListener
+public class MenuPrincipal extends Frame implements WindowListener, ActionListener 
 {
+
+	private static final long serialVersionUID = 1L;
+	Image menuPrincipal;
+	Toolkit herramienta;
+
 	// --- General components ---
-	Frame windowPrincipal = new Frame("Menú Principal");
 	MenuBar barraMenu = new MenuBar();
 
 	// --- Main menus ---
@@ -38,7 +44,6 @@ public class MenuPrincipal implements WindowListener, ActionListener
 	// --- Menu items for "Realizan" ---
 	MenuItem menuRealizanNuevo = new MenuItem("Nuevo");
 	MenuItem menuRealizanListado = new MenuItem("Listado");
-	MenuItem menuRealizanBaja = new MenuItem("Baja");
 	MenuItem menuRealizanModificar = new MenuItem("Modificar");
 
 	// --- Create a variable to store the type of user ---
@@ -57,18 +62,22 @@ public class MenuPrincipal implements WindowListener, ActionListener
 		// --- Set the type of user ---
 		tipoUsuario = t;
 
+		// --- Establish a Title for the window ---
+		setTitle("MenÃº Principal");
 		// --- Set the layout of the main window to a flow layout ---
-		windowPrincipal.setLayout(new FlowLayout());
+		setLayout(new FlowLayout());
 		// --- Set the menu bar of the main window ---
-		windowPrincipal.setMenuBar(barraMenu);		
+		setMenuBar(barraMenu);		
 
 		// --- Set general window options ---
-		windowPrincipal.addWindowListener(this);
-		windowPrincipal.setResizable(false); 
-		windowPrincipal.setSize(450, 450); 
-		windowPrincipal.setLocationRelativeTo(null);
-		windowPrincipal.setBackground(Color.white);
+		addWindowListener(this);
+		setResizable(false); 
+		setSize(450, 450); 
+		setLocationRelativeTo(null);
 
+		// -- Add an image for background app --
+		herramienta = getToolkit();
+		menuPrincipal = herramienta.getImage("images/menuPrincipal.png");
 
 		// --- Add an action listener to each menu item for "Clientes" ---
 		menuClientesNuevo.addActionListener(this);
@@ -85,7 +94,6 @@ public class MenuPrincipal implements WindowListener, ActionListener
 		// --- Add an action listener to each menu item for "Realizan" ---
 		menuRealizanNuevo.addActionListener(this);
 		menuRealizanListado.addActionListener(this);
-		menuRealizanBaja.addActionListener(this);
 		menuRealizanModificar.addActionListener(this);
 
 		// --- Add menu items to their corresponding menus ---
@@ -115,13 +123,16 @@ public class MenuPrincipal implements WindowListener, ActionListener
 		{
 			menuRealizan.addSeparator();
 			menuRealizan.add(menuRealizanListado);
-			menuRealizan.add(menuRealizanBaja);
 			menuRealizan.add(menuRealizanModificar);
 		}
 		barraMenu.add(menuRealizan);
-		
+
 		// --- Set window visible --- 
-		windowPrincipal.setVisible(true); 
+		setVisible(true); 
+	}
+
+	public void paint(Graphics g) {
+		g.drawImage(menuPrincipal, 0, 0, this);
 	}
 
 	public void windowActivated(WindowEvent we) {}
@@ -190,11 +201,6 @@ public class MenuPrincipal implements WindowListener, ActionListener
 			//conexion.logs("[+] " +user, " has opened '...' window.");
 		}
 		else if (evento.getSource().equals(menuRealizanListado)) 
-		{
-			//new ...
-			//conexion.logs("[+] " +user, " has opened '...' window.");
-		}
-		else if (evento.getSource().equals(menuRealizanBaja)) 
 		{
 			//new ...
 			//conexion.logs("[+] " +user, " has opened '...' window.");

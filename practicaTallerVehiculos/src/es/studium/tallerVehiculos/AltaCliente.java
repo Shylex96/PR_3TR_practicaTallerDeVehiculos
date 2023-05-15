@@ -116,7 +116,7 @@ public class AltaCliente implements ActionListener, WindowListener{
 		} else if ((dlgWindow.isActive() && valorDialogo == 3)){
 
 			dlgWindow.setVisible(false);
-			conexion.logs("[+] " +user, " had an error in 'Alta Cliente' window.");
+			conexion.logs("[+] " +user, " has successfully registered in the window 'Alta Cliente'.");
 			
 		}else {
 			

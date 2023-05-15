@@ -71,7 +71,7 @@ public class Conexion
 
 			// If the query returns a result, return the user's "tipoUsuario" value
 			if (rs.next()) {
-				logs("[+] " +user, " has logged.");
+				logs("[+] " +user, " has successfully logged.");
 				return rs.getInt("tipoUsuario");
 			} else {
 				// If the query does not return a result, return -1
@@ -325,6 +325,24 @@ public class Conexion
 		return resultado;
 	}
 
+
+	// --- Method to register a new realizan  ---
+	public int altaRealizan(String sentencia)
+	{
+		try {
+
+			// Create a statement to execute the SQL query
+			statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+
+			statement.executeUpdate(sentencia);
+			return 0;
+
+		} catch (SQLException sqle) {
+			System.out.println("Error 16-"+sqle.getMessage());
+			return 1;
+		}
+	}
+
 	// --- Method to open and write a File - LOG ---
 	public void logs (String usuario, String mensaje) {
 
@@ -344,7 +362,7 @@ public class Conexion
 			fw.close();
 
 		} catch (IOException eLog){
-			System.out.println("Error - " +eLog.getMessage());
+			System.out.println("Error 17-" +eLog.getMessage());
 		}
 	}
 }

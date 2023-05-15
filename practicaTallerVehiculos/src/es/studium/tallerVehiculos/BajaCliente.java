@@ -147,6 +147,7 @@ public class BajaCliente implements ActionListener, WindowListener {
 
 				dlgAviso.add(lblAviso);
 				lblAviso.setText("Cliente: " +choClientes.getSelectedItem() + " eliminado correctamente.");
+				conexion.logs("[+] " +user, " has successfully performed a delete of the Client '" + choClientes.getSelectedItem() + "' in the window 'Baja Cliente'." );
 				conexion.fillChoiceClientes(choClientes);
 				dlgAviso.setVisible(true);
 

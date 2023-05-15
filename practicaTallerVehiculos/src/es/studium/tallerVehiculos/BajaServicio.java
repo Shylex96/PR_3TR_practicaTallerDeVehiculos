@@ -146,6 +146,7 @@ public class BajaServicio implements ActionListener, WindowListener {
 
 				dlgAviso.add(lblAviso);
 				lblAviso.setText("Servicio: " +choServicios.getSelectedItem() + " eliminado correctamente.");
+				conexion.logs("[+] " +user, " has successfully performed a delete of the Service '" + choServicios.getSelectedItem() + "' in the window 'Baja Servicio'." );
 				conexion.fillChoiceServicios(choServicios);
 				dlgAviso.setVisible(true);
 

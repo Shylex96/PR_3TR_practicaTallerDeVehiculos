@@ -196,7 +196,7 @@ public class ModificarServicio implements ActionListener, WindowListener {
 			// --- If user clic to cancel modification button ---
 		} else if (e.getSource().equals(btnCancelarModificacion)) {
 
-			lblAviso.setText("ModificaciÃ³n de Servicio cancelada.");
+			lblAviso.setText("Modificación de Servicio cancelada.");
 			dlgAviso.setVisible(true);
 
 			valorDialogo = 2;
@@ -226,7 +226,7 @@ public class ModificarServicio implements ActionListener, WindowListener {
 
 				// --- If the SQL statement executed correctly ---
 				// --- Show success dialog ---
-				lblAviso.setText("Cambios realizados con Ã©xito.");
+				lblAviso.setText("Cambios realizados con éxito.");
 				lblAviso.setForeground(Color.black);
 				dlgAviso.setBackground(Color.green);
 				dlgAviso.setVisible(true);

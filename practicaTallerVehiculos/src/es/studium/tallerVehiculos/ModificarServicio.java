@@ -233,7 +233,7 @@ public class ModificarServicio implements ActionListener, WindowListener {
 
 				// -- Generate message to log file  -- 
 				conexion.logs("[+] " +user, " " +sentencia);
-				
+
 				// --- Fill services choice with the updates ---
 				conexion.fillChoiceServicios(choServicios);
 

@@ -45,7 +45,7 @@ public class Login implements ActionListener, WindowListener, KeyListener {
 
 	Login() {
 
-		// --- Configuración del panel principal ---
+		// --- Main Panel Configuration ---
 		windowLogin.setLayout(null);
 
 		// --- Main panel configuration ---

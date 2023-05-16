@@ -24,81 +24,79 @@ import com.itextpdf.layout.properties.HorizontalAlignment;
 import com.itextpdf.layout.properties.TextAlignment;
 import com.itextpdf.layout.properties.UnitValue;
 
-public class ListadoServicio implements ActionListener, WindowListener {
+public class ListadoRealizan implements ActionListener, WindowListener {
 
 	// Destination File
-	public static final String DEST = "Listado_Servicios.pdf";
+	public static final String DEST = "Listado_Realizan.pdf";
 
-	Frame windowListadoServicios = new Frame("Listado de Servicios");
-	Label lblIdServicio = new Label ("ID:");
-	Label lblPrecioServicio = new Label ("Precio:");
-	Label lblTipoServicio = new Label ("Tipo Servicio:");
-	Label lblDescripcion = new Label ("Descripción:");
-	TextArea areaDatos = new TextArea (10, 35);
+	Frame windowListadoClientes = new Frame("Listado de Realización");
+	Label lblIdCliente = new Label ("Cliente:");
+	Label lblIdServicio = new Label ("Servicio:");
+	Label lblTiempoEmpleado = new Label ("Tiempo:");
+	Label lblFechaRealizacion = new Label ("Fecha:");
+	TextArea areaDatosRealizan = new TextArea (10, 35);
 	Button btnPDF = new Button ("PDF");
 
 	Conexion conexion = new Conexion();
 	String user;
 
-	ListadoServicio(String user) {
+	ListadoRealizan(String user) {
 
 		// -- Create user --
 		this.user = user;
 
 		// --- Main panel configuration ---
-		windowListadoServicios.setLayout(null);
+		windowListadoClientes.setLayout(null);
 
 		// --- Main window settings ---
-		windowListadoServicios.addWindowListener(this);
-		windowListadoServicios.setResizable(false);
-		windowListadoServicios.setSize(500, 400); 
-		windowListadoServicios.setLocationRelativeTo(null);
-		windowListadoServicios.setBackground(Color.cyan);
+		windowListadoClientes.addWindowListener(this);
+		windowListadoClientes.setResizable(false);
+		windowListadoClientes.setSize(500, 400); 
+		windowListadoClientes.setLocationRelativeTo(null);
+		windowListadoClientes.setBackground(Color.cyan);
 
 		/*
 		 * Add components to the main window and
 		 * establish their respective locations.
 		 */
 
-		// --- ID ---
-		lblIdServicio.setBounds(20, 40, 20, 20);
-		windowListadoServicios.add(lblIdServicio);
+		// --- Client ---
+		lblIdCliente.setBounds(20, 40, 50, 20);
+		windowListadoClientes.add(lblIdCliente);
 
-		// --- Service Price ---
-		lblPrecioServicio.setBounds(65, 40, 50, 20);
-		windowListadoServicios.add(lblPrecioServicio);
+		// --- Service ---
+		lblIdServicio.setBounds(120, 40, 50, 20);
+		windowListadoClientes.add(lblIdServicio);
 
-		// --- Service Type ---
-		lblTipoServicio.setBounds(170, 40, 75, 20);
-		windowListadoServicios.add(lblTipoServicio);
+		// --- Time ---
+		lblTiempoEmpleado.setBounds(215, 40, 55, 20);
+		windowListadoClientes.add(lblTiempoEmpleado);
 
-		// --- Service Description ---
-		lblDescripcion.setBounds(280, 40, 120, 20);
-		windowListadoServicios.add(lblDescripcion);
+		// --- Date ---
+		lblFechaRealizacion.setBounds(315, 40, 50, 20);
+		windowListadoClientes.add(lblFechaRealizacion);
 
 		// --- TextArea ---
 		// --- Fill TextArea ---
-		conexion.fillListadoServicio(areaDatos, user);
-		areaDatos.setEditable(false);
-		areaDatos.setBounds(20, 70, 460, 250);
-		windowListadoServicios.add(areaDatos);
+		conexion.fillListadoRealizan(areaDatosRealizan, user);
+		areaDatosRealizan.setEditable(false);
+		areaDatosRealizan.setBounds(20, 70, 460, 250);
+		windowListadoClientes.add(areaDatosRealizan);
 
 		// --- PDF Button ---
 		btnPDF.setEnabled(true);
 		btnPDF.setBounds(225, 330, 50, 50);
 		btnPDF.addActionListener(this);
-		windowListadoServicios.add(btnPDF);
+		windowListadoClientes.add(btnPDF);
 
-
-		windowListadoServicios.setVisible(true);
+		windowListadoClientes.setVisible(true);
 	}
-
 	public void windowActivated(WindowEvent e) {}
 	public void windowClosed(WindowEvent e) {}
 	public void windowClosing(WindowEvent e)
 	{
-		windowListadoServicios.setVisible(false);
-		conexion.logs("[+] " +user, " has closed 'Listado Servicio' window.");
+		windowListadoClientes.setVisible(false);
+		conexion.logs("[+] " +user, " has closed 'Listado Realizan' window.");
 	}
 	public void windowDeactivated(WindowEvent e) {}
 	public void windowDeiconified(WindowEvent e) {}
@@ -106,9 +104,8 @@ public class ListadoServicio implements ActionListener, WindowListener {
 	public void windowOpened(WindowEvent e) {}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
 		if (btnPDF.equals(e.getSource())) {
-			conexion.logs("[+] " +user, " is trying to generate a PDF of 'Listado Servicio'.");
+			conexion.logs("[+] " +user, " is trying to generate a PDF of 'Listado Realizan'.");
 			try {
 				// Initialize PDF writer
 				PdfWriter writer = new PdfWriter(DEST);
@@ -122,10 +119,10 @@ public class ListadoServicio implements ActionListener, WindowListener {
 				table.setHorizontalAlignment(HorizontalAlignment.CENTER);
 
 				// Create table headers
-				Cell headerCell1 = createCell("ID:");
-				Cell headerCell2 = createCell("Precio:");
-				Cell headerCell3 = createCell("Tipo de Servicio:");
-				Cell headerCell4 = createCell("Descripción:");
+				Cell headerCell1 = createCell("Cliente:");
+				Cell headerCell2 = createCell("Tipo de Servicio:");
+				Cell headerCell3 = createCell("Tiempo Empleado:");
+				Cell headerCell4 = createCell("Fecha de Realización:");
 
 				// Add header cells to the table
 				table.addHeaderCell(headerCell1);
@@ -144,7 +141,7 @@ public class ListadoServicio implements ActionListener, WindowListener {
 				// Get all the information of the rows of the 
 				// textarea and separate it with split by "\\n"
 				// Store them in "lines" array.
-				String[] lines = areaDatos.getText().split("\\n");
+				String[] lines = areaDatosRealizan.getText().split("\\n");
 
 				for (String line : lines) {
 					// Split line into row data using tabs as separators "\\t"
@@ -175,10 +172,10 @@ public class ListadoServicio implements ActionListener, WindowListener {
 
 				// Open the new PDF document just created
 				Desktop.getDesktop().open(new File(DEST));
-				conexion.logs("[+] " +user, " has generated a PDF of 'Listado Servicio'.");
+				conexion.logs("[+] " +user, " has generated a PDF of 'Listado Realizan'.");
 
 			} catch (IOException ioe) {
-				conexion.logs("[+] " +user, " has failed to generate a PDF of 'Listado Servicio'.");
+				conexion.logs("[+] " +user, " has failed to generate a PDF of 'Listado Realizan'.");
 				ioe.printStackTrace();
 			}
 		}
@@ -191,6 +188,6 @@ public class ListadoServicio implements ActionListener, WindowListener {
 		return cell;
 
 	}
-}
 
+}
 

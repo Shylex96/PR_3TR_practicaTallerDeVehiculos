@@ -69,13 +69,13 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		setMenuBar(barraMenu);		
 
 		// --- Set general window options ---
-		setTitle("MenÃº Principal");
+		setTitle("Menú Principal");
 		addWindowListener(this);
 		setResizable(false); 
 		setSize(450, 450); 
 		setLocationRelativeTo(null);
 		setBackground(Color.white);
-		
+
 		// --- Paint background with an image ---
 		herramienta = getToolkit();
 		menuPrincipal = herramienta.getImage("images/menuPrincipal.png");
@@ -135,11 +135,11 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		// --- Set window visible --- 
 		setVisible(true); 
 	}
-	
-public void paint(Graphics g) {
-		
+
+	public void paint(Graphics g) {
+
 		g.drawImage(menuPrincipal, -5, -5, this);
-		
+
 	}
 
 	public void windowActivated(WindowEvent we) {}
@@ -209,8 +209,9 @@ public void paint(Graphics g) {
 		}
 		else if (evento.getSource().equals(menuRealizanListado)) 
 		{
-			//new ...
-			//conexion.logs("[+] " +user, " has opened '...' window.");
+			new ListadoRealizan(user);
+			conexion.logs("[+] " +user, " has opened 'Listado Realizan' window.");
+			conexion.logs("[+] " +user, " has successfully generated Realizan List.");
 		}
 		else if (evento.getSource().equals(menuRealizanBaja)) 
 		{

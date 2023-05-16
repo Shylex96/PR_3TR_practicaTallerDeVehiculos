@@ -238,7 +238,7 @@ public class Conexion
 			while(resultado.next()) {
 				// Append add
 				areaDatos.append(resultado.getString("idServicio")+"  \t");
-				areaDatos.append(resultado.getString("precioServicio")+"      \t");
+				areaDatos.append(resultado.getString("precioServicio")+" €     \t");
 				areaDatos.append(resultado.getString("tipoServicio")+"     \t");
 				areaDatos.append(resultado.getString("descripcionServicio")+"\n");
 			}
@@ -344,6 +344,34 @@ public class Conexion
 		}
 	}
 
+	public void fillListadoRealizan(TextArea areaDatosRealizan, String user)
+	{
+		String sentencia = "SELECT idRealiza, horasEmpleadas, fechaServiciosRealizados, nombreCliente, tipoServicio FROM realizan"
+				+ " JOIN clientes ON realizan.idClientesFK = clientes.idCliente JOIN servicios ON realizan.idServiciosFK = servicios.idServicio;";
+		try {
+
+			// Create a statement to execute the SQL query
+			statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+
+			ResultSet resultado = statement.executeQuery(sentencia);
+			while(resultado.next()) {
+				// Append add
+				areaDatosRealizan.append(resultado.getString("nombreCliente")+"  \t");
+				areaDatosRealizan.append(resultado.getString("tipoServicio")+"      \t");
+				areaDatosRealizan.append(resultado.getString("horasEmpleadas")+"     \t");
+
+				// Convert date format
+	            String fechaOriginal = resultado.getString("fechaServiciosRealizados");
+	            String fechaFormateada = LocalDate.parse(fechaOriginal).format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+
+				areaDatosRealizan.append(fechaFormateada + "\n");
+			}
+
+		} catch (SQLException sqle) {
+			System.out.println("Error 17-" + sqle.getMessage());
+		}
+	}
+
 	// --- Method to open and write a File - LOG ---
 	public void logs (String usuario, String mensaje) {
 
@@ -363,9 +391,11 @@ public class Conexion
 			fw.close();
 
 		} catch (IOException eLog){
-			System.out.println("Error 17-" +eLog.getMessage());
+			System.out.println("Error 18-" +eLog.getMessage());
 		}
 	}
+
+
 }
 
 

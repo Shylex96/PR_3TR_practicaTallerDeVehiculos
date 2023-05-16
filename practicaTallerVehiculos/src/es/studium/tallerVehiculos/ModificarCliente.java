@@ -225,7 +225,7 @@ public class ModificarCliente implements ActionListener, WindowListener {
 				lblAviso.setForeground(Color.black);
 				dlgAviso.setBackground(Color.green);
 				dlgAviso.setVisible(true);
-				
+
 				// -- Generate message to log file  -- 
 				conexion.logs("[+] " +user, " " +sentencia);
 

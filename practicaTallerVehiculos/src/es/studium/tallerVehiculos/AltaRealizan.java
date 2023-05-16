@@ -256,7 +256,7 @@ public class AltaRealizan implements ActionListener, WindowListener{
 		String cliente = choCliente.getSelectedItem();
 		String[] clienteDefinitivo = cliente.split("-");
 		String clientePosicionUno = clienteDefinitivo[0];
-		*/
+		 */
 
 		String cliente = choCliente.getSelectedItem().split("-")[0];
 		String servicio = choServicio.getSelectedItem().split("-")[0];

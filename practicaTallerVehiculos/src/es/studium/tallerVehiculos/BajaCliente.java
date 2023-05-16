@@ -30,7 +30,7 @@ public class BajaCliente implements ActionListener, WindowListener {
 
 
 	BajaCliente(String user) {
-		
+
 		// -- Create user --
 		this.user = user;
 
@@ -93,7 +93,7 @@ public class BajaCliente implements ActionListener, WindowListener {
 	public void windowDeactivated(WindowEvent e) {}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+
 		// --- If delete button has been clicked ---
 		if (e.getSource().equals(btnEliminar)) {
 

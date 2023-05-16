@@ -117,9 +117,9 @@ public class AltaCliente implements ActionListener, WindowListener{
 
 			dlgWindow.setVisible(false);
 			conexion.logs("[+] " +user, " has successfully registered in the window 'Alta Cliente'.");
-			
+
 		}else {
-			
+
 			windowAltaCliente.setVisible(false);
 			conexion.logs("[+] " +user, " has closed 'Alta Cliente' window.");
 		}

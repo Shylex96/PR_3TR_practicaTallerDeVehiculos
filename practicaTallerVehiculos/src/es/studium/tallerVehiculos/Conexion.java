@@ -73,6 +73,7 @@ public class Conexion
 			if (rs.next()) {
 				logs("[+] " +user, " has successfully logged.");
 				return rs.getInt("tipoUsuario");
+
 			} else {
 				// If the query does not return a result, return -1
 				return -1;

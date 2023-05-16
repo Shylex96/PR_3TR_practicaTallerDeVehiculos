@@ -16,7 +16,7 @@ import java.util.Calendar;
 public class AltaRealizan implements ActionListener, WindowListener{
 
 	// --- General components ---
-	Frame windowAltaRealizan = new Frame("Alta de Realización");
+	Frame windowAltaRealizan = new Frame("Alta de RealizaciÃ³n");
 
 	// --- Labels, TextFields & Buttons components declared ---
 	Label lblNombreCliente = new Label ("Cliente:");
@@ -28,12 +28,12 @@ public class AltaRealizan implements ActionListener, WindowListener{
 	Choice choHoras = new Choice();
 	Label lblMinutos = new Label("Minutos:");
 	Choice choMinutos = new Choice();
-	Label lblFecha = new Label("Fecha de realización:");
-	Label lblDia = new Label("Día:");
+	Label lblFecha = new Label("Fecha de realizaciï¿½n:");
+	Label lblDia = new Label("DÃ­a:");
 	Choice choDia = new Choice();
 	Label lblMes = new Label("Mes:");
 	Choice choMes = new Choice();
-	Label lblAnio = new Label("Año:");
+	Label lblAnio = new Label("AÃ±o:");
 	Choice choAnio = new Choice();
 
 	Button btnAceptar = new Button ("Aceptar");
@@ -105,7 +105,7 @@ public class AltaRealizan implements ActionListener, WindowListener{
 		}
 
 		// --- Add minutes option (0-59) ---
-		for (int i = 0; i <= 59; i++) {
+		for (int i = 1; i <= 59; i++) {
 			choMinutos.add(Integer.toString(i));
 		}
 
@@ -219,7 +219,7 @@ public class AltaRealizan implements ActionListener, WindowListener{
 		if (e.getSource().equals(btnCancelar)) {
 
 			valorDialogo = 1;
-			lblAviso.setText("Alta de Realización cancelada.");
+			lblAviso.setText("Alta de Realizaciï¿½n cancelada.");
 			dlgWindow.setVisible(true);
 		}
 
@@ -227,12 +227,23 @@ public class AltaRealizan implements ActionListener, WindowListener{
 		else if (e.getSource().equals (btnAceptar)) {
 
 			// --- Check if choice index are '0' ---
-			if (!(choCliente.getSelectedIndex()!=0 || choServicio.getSelectedIndex()!=0)) {
+			if (choCliente.getSelectedIndex()==0 && choServicio.getSelectedIndex()==0) {
 
 				valorDialogo = 2;
 				lblAviso.setText("Seleccione un Cliente y un Servicio de la Lista.");
 				dlgWindow.setVisible(true);
-				
+
+			} else if (choCliente.getSelectedIndex()==0) {
+
+				valorDialogo = 2;
+				lblAviso.setText("Seleccione un Cliente de la Lista.");
+				dlgWindow.setVisible(true);
+
+			} else if (choServicio.getSelectedIndex()==0) {
+				valorDialogo = 2;
+				lblAviso.setText("Seleccione un Servicio de la Lista.");
+				dlgWindow.setVisible(true);
+
 			} else {
 				sendToDB();
 			}
@@ -246,21 +257,21 @@ public class AltaRealizan implements ActionListener, WindowListener{
 		String[] clienteDefinitivo = cliente.split("-");
 		String clientePosicionUno = clienteDefinitivo[0];
 		*/
-		
-		String cliente = choCliente.getSelectedItem().split("-")[0];
-	    String servicio = choCliente.getSelectedItem().split("-")[0];
-	    
-	    String horas = choHoras.getSelectedItem();
-	    String minutos = choMinutos.getSelectedItem();
-	    String horasYminutos = horas + ":" + minutos;
-	    String dia = choDia.getSelectedItem();
-	    String mes = Integer.toString(choMes.getSelectedIndex()+1);
-	    String anio = choAnio.getSelectedItem();
-	    String fecha = anio + "-" + mes + "-" + dia;
 
-	    // --- Sentence for BD ---
-	    String sentencia = "INSERT INTO realizan VALUES (null, '" + horasYminutos + "', '" + fecha + "', '" + cliente + "', '" + servicio + "')";
-	    System.out.println(sentencia);
+		String cliente = choCliente.getSelectedItem().split("-")[0];
+		String servicio = choServicio.getSelectedItem().split("-")[0];
+
+		String horas = choHoras.getSelectedItem();
+		String minutos = choMinutos.getSelectedItem();
+		String horasYminutos = horas + ":" + minutos;
+		String dia = choDia.getSelectedItem();
+		String mes = Integer.toString(choMes.getSelectedIndex()+1);
+		String anio = choAnio.getSelectedItem();
+		String fecha = anio + "-" + mes + "-" + dia;
+
+		// --- Sentence for BD ---
+		String sentencia = "INSERT INTO realizan VALUES (null, '" + horasYminutos + "', '" + fecha + "', '" + cliente + "', '" + servicio + "')";
+		System.out.println(sentencia);
 		int respuesta = conexion.altaRealizan(sentencia);
 
 		if (respuesta !=0) {

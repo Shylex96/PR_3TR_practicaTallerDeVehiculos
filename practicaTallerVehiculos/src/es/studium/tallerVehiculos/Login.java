@@ -13,6 +13,17 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.File;
+import java.io.IOException;
+
+import javax.sound.sampled.AudioFileFormat;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Login implements ActionListener, WindowListener, KeyListener {
 
@@ -47,7 +58,7 @@ public class Login implements ActionListener, WindowListener, KeyListener {
 		// --- Component configuration ---
 		//txtUser.setText("admin");
 		//txtPassword.setText("admin");
-		
+
 		// --- User ---
 		lblUser.setBounds(30, 60, 80, 25);
 		windowLogin.add(lblUser);
@@ -62,8 +73,8 @@ public class Login implements ActionListener, WindowListener, KeyListener {
 		txtPassword.setEchoChar('•'); // ASCII 7
 		txtPassword.addActionListener(this);
 		windowLogin.add(txtPassword);
-		
-		
+
+
 		txtUser.setText("admin");
 		txtPassword.setText("admin");
 
@@ -134,9 +145,47 @@ public class Login implements ActionListener, WindowListener, KeyListener {
 			// --- Open the main menu and close the login window ---
 			new MenuPrincipal(tipoUsuario, user);
 			windowLogin.setVisible(false);
+
+			File sf = new File("login.wav");
+			AudioFileFormat aff;
+			AudioInputStream ais;
+
+			try {
+
+				aff = AudioSystem.getAudioFileFormat(sf);
+				ais = AudioSystem.getAudioInputStream(sf);
+
+				AudioFormat af = aff.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class,
+						ais.getFormat(), ((int) ais.getFrameLength() * af.getFrameSize()));
+				Clip ol = (Clip) AudioSystem.getLine(info);
+				ol.open(ais);
+				ol.loop(1);
+				// Damos tiempo para que el sonido sea escuchado
+				Thread.sleep(100);
+				ol.close();
+			}
+
+			catch(UnsupportedAudioFileException ee)
+			{
+				System.out.println(ee.getMessage());
+			}
+			catch(IOException ea)
+			{
+				System.out.println(ea.getMessage());
+			}
+			catch(LineUnavailableException LUE)
+			{
+				System.out.println(LUE.getMessage());
+			}
+			catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
 		}
 		// --- If the credentials are wrong: Show error dialog ---
 		else {
+
 			dlgWindow.setLayout(new FlowLayout());
 			dlgWindow.addWindowListener(this);
 			dlgWindow.setSize(300, 75); 
@@ -151,7 +200,6 @@ public class Login implements ActionListener, WindowListener, KeyListener {
 
 			dlgWindow.setVisible(true);
 		}
-
 	}
 
 	@Override

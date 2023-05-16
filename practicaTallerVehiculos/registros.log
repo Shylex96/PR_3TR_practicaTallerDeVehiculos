@@ -1,35 +1,8 @@
-[15/05/2023] - [20:01:41]: [+] admin has successfully logged.
-[15/05/2023] - [20:01:42]: [+] admin has opened 'Alta Realizan' window.
-[15/05/2023] - [20:01:43]: [+] admin has closed 'Alta Realizan' window.
-[15/05/2023] - [20:01:44]: [+] admin has opened 'Alta Realizan' window.
-[15/05/2023] - [20:01:46]: [+] admin has canceled 'Alta Realizan' window.
-[15/05/2023] - [20:01:47]: [+] admin has opened 'Alta Realizan' window.
-[15/05/2023] - [20:01:50]: [+] admin had an error in 'Alta Realizan' window.
-[15/05/2023] - [20:01:54]: [+] admin has closed 'Alta Realizan' window.
-[15/05/2023] - [20:01:54]: [+] admin has successfully logged out.
+[16/05/2023] - [09:39:25]: [+] admin has successfully logged.
+[16/05/2023] - [09:39:26]: [+] admin has opened 'Alta Servicio' window.
+[16/05/2023] - [09:39:27]: [+] admin has closed 'Alta Servicio' window.
+[16/05/2023] - [09:39:28]: [+] admin has opened 'Listado Servicio' window.
+[16/05/2023] - [09:39:28]: [+] admin has successfully generated Service List.
+[16/05/2023] - [09:39:29]: [+] admin has closed 'Listado Servicio' window.
+[16/05/2023] - [09:39:29]: [+] admin has successfully logged out.
 --------------------------------------------------------------------------------
-[15/05/2023] - [20:03:16]: [+] admin has successfully logged.
-[15/05/2023] - [20:03:17]: [+] admin has opened 'Alta Realizan' window.
-[15/05/2023] - [20:03:22]: [+] admin has closed 'Alta Realizan' window.
-[15/05/2023] - [20:03:23]: [+] admin has successfully logged out.
---------------------------------------------------------------------------------
-[15/05/2023] - [20:15:08]: [+] admin has successfully logged.
-[15/05/2023] - [20:15:09]: [+] admin has successfully logged out.
---------------------------------------------------------------------------------
-[15/05/2023] - [20:16:28]: [+] admin has successfully logged.
-[15/05/2023] - [20:16:29]: [+] admin has opened 'Alta Realizan' window.
-[15/05/2023] - [20:16:48]: [+] admin has closed 'Alta Realizan' window.
-[15/05/2023] - [20:31:13]: [+] admin has successfully logged out.
---------------------------------------------------------------------------------
-[15/05/2023] - [20:34:32]: [+] admin has successfully logged.
-[15/05/2023] - [20:34:33]: [+] admin has opened 'Alta Realizan' window.
-[15/05/2023] - [20:34:52]: [+] admin has closed 'Alta Realizan' window.
-[15/05/2023] - [20:34:53]: [+] admin has successfully logged out.
---------------------------------------------------------------------------------
-[15/05/2023] - [20:34:58]: [+] admin has successfully logged.
-[15/05/2023] - [20:34:59]: [+] admin has opened 'Alta Realizan' window.
-[15/05/2023] - [20:41:33]: [+] admin has successfully logged.
-[15/05/2023] - [20:41:34]: [+] admin has opened 'Alta Realizan' window.
-[15/05/2023] - [20:51:52]: [+] admin has successfully logged.
-[15/05/2023] - [20:51:53]: [+] admin has opened 'Alta Realizan' window.
-[15/05/2023] - [20:52:07]: [+] admin INSERT INTO realizan VALUES (null, '5:15', '2023-5-15', '1', '1')

@@ -215,12 +215,12 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		}
 		else if (evento.getSource().equals(menuRealizanBaja)) 
 		{
-			//new ...
+			// new... /// dlg: No ilegals actions..
 			//conexion.logs("[+] " +user, " has opened '...' window.");
 		}
 		else if (evento.getSource().equals(menuRealizanModificar)) 
 		{
-			//new ...
+			// new... /// dlg: No ilegals actions..
 			//conexion.logs("[+] " +user, " has opened '...' window.");
 		}
 	}

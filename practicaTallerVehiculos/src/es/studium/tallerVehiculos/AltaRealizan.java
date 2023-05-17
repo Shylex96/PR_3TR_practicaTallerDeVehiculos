@@ -9,14 +9,16 @@ import java.awt.Frame;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.util.Calendar;
 
-public class AltaRealizan implements ActionListener, WindowListener{
+public class AltaRealizan implements ActionListener, WindowListener, ItemListener {
 
 	// --- General components ---
-	Frame windowAltaRealizan = new Frame("Alta de RealizaciÃ³n");
+	Frame windowAltaRealizan = new Frame("Alta de Realización");
 
 	// --- Labels, TextFields & Buttons components declared ---
 	Label lblNombreCliente = new Label ("Cliente:");
@@ -28,12 +30,12 @@ public class AltaRealizan implements ActionListener, WindowListener{
 	Choice choHoras = new Choice();
 	Label lblMinutos = new Label("Minutos:");
 	Choice choMinutos = new Choice();
-	Label lblFecha = new Label("Fecha de realizaciï¿½n:");
-	Label lblDia = new Label("DÃ­a:");
+	Label lblFecha = new Label("Fecha de realización:");
+	Label lblDia = new Label("Día:");
 	Choice choDia = new Choice();
 	Label lblMes = new Label("Mes:");
 	Choice choMes = new Choice();
-	Label lblAnio = new Label("AÃ±o:");
+	Label lblAnio = new Label("Año:");
 	Choice choAnio = new Choice();
 
 	Button btnAceptar = new Button ("Aceptar");
@@ -99,12 +101,12 @@ public class AltaRealizan implements ActionListener, WindowListener{
 		choMinutos.setBounds(85, 190, 50, 20);
 		windowAltaRealizan.add(choMinutos);
 
-		// --- Add hours option (0-23) ---
+		// --- Add hours option (0-71) ---
 		for (int i = 0; i <= 71; i++) {
 			choHoras.add(Integer.toString(i));
 		}
 
-		// --- Add minutes option (0-59) ---
+		// --- Add minutes option (1-59) --- 
 		for (int i = 1; i <= 59; i++) {
 			choMinutos.add(Integer.toString(i));
 		}
@@ -113,37 +115,34 @@ public class AltaRealizan implements ActionListener, WindowListener{
 		lblFecha.setBounds(200, 110, 120, 20);
 		windowAltaRealizan.add(lblFecha);
 
-		lblDia.setBounds(205, 140, 30, 20);
-		windowAltaRealizan.add(lblDia);
-		choDia.setBounds(240, 140, 70, 20);
-		windowAltaRealizan.add(choDia);
+		lblAnio.setBounds(205, 140, 30, 20);
+		windowAltaRealizan.add(lblAnio);
+		choAnio.setBounds(240, 140, 70, 20);
+		windowAltaRealizan.add(choAnio);
 
 		lblMes.setBounds(205, 165, 30, 20);
 		windowAltaRealizan.add(lblMes);
 		choMes.setBounds(240, 165, 70, 20);
 		windowAltaRealizan.add(choMes);
 
-		lblAnio.setBounds(205, 190, 30, 20);
-		windowAltaRealizan.add(lblAnio);
-		choAnio.setBounds(240, 190, 70, 20);
-		windowAltaRealizan.add(choAnio);
+		lblDia.setBounds(205, 190, 30, 20);
+		windowAltaRealizan.add(lblDia);
+		choDia.setBounds(240, 190, 70, 20);
+		windowAltaRealizan.add(choDia);
 
 		// --- Set the options for the date fields ---
-		// --- Day ---
+		// --- Day is on "itemStateChanged" method.
 		Calendar calendar = Calendar.getInstance();
-		int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
-		for (int i = 1; i <= currentDay; i++) {
-			choDia.add(Integer.toString(i));
-		}
-
+		
 		// --- Month ---
 		String[] months = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
 				"Octubre", "Noviembre", "Diciembre"};
 		int currentMonth = calendar.get(Calendar.MONTH);
+		
 		for (int i = 0; i <= currentMonth; i++) {
 			choMes.add(months[i]);
 		}
-
+		
 		// --- Year ---
 		int currentYear = calendar.get(Calendar.YEAR);
 		for (int i = 2023; i <= currentYear; i++) {
@@ -159,6 +158,7 @@ public class AltaRealizan implements ActionListener, WindowListener{
 		// --- Set the listeners ---
 		btnAceptar.addActionListener(this);
 		btnCancelar.addActionListener(this);
+		choMes.addItemListener(this);
 
 		// --- Set window visible ---
 		windowAltaRealizan.setVisible(true);
@@ -240,6 +240,7 @@ public class AltaRealizan implements ActionListener, WindowListener{
 				dlgWindow.setVisible(true);
 
 			} else if (choServicio.getSelectedIndex()==0) {
+
 				valorDialogo = 2;
 				lblAviso.setText("Seleccione un Servicio de la Lista.");
 				dlgWindow.setVisible(true);
@@ -275,7 +276,7 @@ public class AltaRealizan implements ActionListener, WindowListener{
 		int respuesta = conexion.altaRealizan(sentencia);
 
 		if (respuesta !=0) {
-			// Show Error 
+			// --- Show Error ---
 			lblAviso.setForeground(Color.red);
 			lblAviso.setText("Error en Alta.");
 			dlgWindow.setVisible(true);
@@ -287,8 +288,55 @@ public class AltaRealizan implements ActionListener, WindowListener{
 			lblAviso.setText("Alta realizada correctamente.");
 			dlgWindow.setVisible(true);
 
-			// -- Generate message to log file  -- 
+			// --- Generate message to log file --- 
 			conexion.logs("[+] " +user, " " + sentencia);
 		}
+	}
+
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		if (e.getSource().equals(choMes)) {
+			// --- Get the selected index of the month Choice and
+			// get the index of the last month in the Choice ---
+			int selectedMonth = choMes.getSelectedIndex();
+			int lastMonthIndex = choMes.getItemCount() - 1;
+
+			// --- Check if the selected month is the last month in the Choice ---
+			if (selectedMonth == lastMonthIndex) {
+				Calendar calendar = Calendar.getInstance();
+				int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+
+				// --- Add the days from 1 to the current day to the "choDia" Choice ---
+				for (int i = 1; i <= currentDay; i++) {
+					choDia.add(Integer.toString(i));
+				}
+				// --- Update the days Choice selection ---
+				updateDaysChoice(currentDay);
+			} else {
+				// --- Get the number of days in the selected month and update 
+				// the days Choice with the correct number of days ---
+				int daysInMonth = getDaysInMonth(selectedMonth);
+				updateDaysChoice(daysInMonth);
+			}
+		}
+	}
+
+	private void updateDaysChoice(int daysInMonth) {
+		// --- Remove all existing items from the days Choice ---
+		choDia.removeAll();
+
+		// --- Add the days from 1 to the specified number of days to the days Choice ---
+		for (int i = 1; i <= daysInMonth; i++) {
+			choDia.add(Integer.toString(i));
+		}
+		// --- To ensure the changes were made correctly ---
+		windowAltaRealizan.validate();
+	}
+
+	private int getDaysInMonth(int month) {
+		// --- Get the maximum number of days for the specified month ---
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(Calendar.MONTH, month);
+		return calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
 	}
 }

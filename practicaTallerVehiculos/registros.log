@@ -381,3 +381,138 @@
 [16/05/2023] - [20:42:50]: [+] admin has closed 'Listado Realizan' window.
 [16/05/2023] - [20:42:50]: [+] admin has successfully logged out.
 --------------------------------------------------------------------------------
+[16/05/2023] - [20:44:54]: [+] admin has successfully logged.
+[16/05/2023] - [20:46:00]: [+] admin has successfully logged.
+[16/05/2023] - [20:46:36]: [+] admin has successfully logged.
+[16/05/2023] - [20:46:44]: [+] admin has opened 'Alta Realizan' window.
+[16/05/2023] - [20:47:52]: [+] admin has closed 'Alta Realizan' window.
+[16/05/2023] - [20:47:53]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[16/05/2023] - [20:48:16]: [+] admin has successfully logged.
+[16/05/2023] - [20:48:18]: [+] admin has opened 'Alta Realizan' window.
+[16/05/2023] - [20:49:05]: [+] admin has closed 'Alta Realizan' window.
+[16/05/2023] - [20:50:20]: [+] admin has opened 'Modificar Servicio' window.
+[16/05/2023] - [20:51:36]: [+] admin has opened 'Alta Cliente' window.
+[16/05/2023] - [20:51:37]: [+] admin has closed 'Alta Cliente' window.
+[16/05/2023] - [20:51:38]: [+] admin has opened 'Alta Realizan' window.
+[16/05/2023] - [21:21:26]: [+] admin has successfully logged.
+[16/05/2023] - [21:21:29]: [+] admin has opened 'Alta Realizan' window.
+[16/05/2023] - [21:21:32]: [+] admin INSERT INTO realizan VALUES (null, '0:1', '2023-1-1', '1', '1')
+[16/05/2023] - [21:21:34]: [+] admin has successfully registered in the window 'Alta Realizan'.
+[16/05/2023] - [21:21:49]: [+] admin has canceled 'Alta Realizan' window.
+[16/05/2023] - [21:21:49]: [+] admin has canceled 'Alta Realizan' window.
+[16/05/2023] - [21:21:50]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [17:38:27]: [+] admin has successfully logged.
+[17/05/2023] - [17:38:33]: [+] admin has opened 'Listado Realizan' window.
+[17/05/2023] - [17:38:33]: [+] admin has successfully generated Realizan List.
+[17/05/2023] - [17:38:36]: [+] admin has closed 'Listado Realizan' window.
+[17/05/2023] - [17:38:38]: [+] admin has opened 'Listado Realizan' window.
+[17/05/2023] - [17:38:38]: [+] admin has successfully generated Realizan List.
+[17/05/2023] - [17:38:46]: [+] admin has closed 'Listado Realizan' window.
+[17/05/2023] - [17:38:47]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [17:43:59]: [+] admin has successfully logged.
+[17/05/2023] - [17:44:01]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [17:44:19]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [17:44:19]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [17:45:24]: [+] admin has successfully logged.
+[17/05/2023] - [17:58:53]: [+] admin has successfully logged.
+[17/05/2023] - [17:58:56]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [17:59:20]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [17:59:21]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [17:59:28]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [17:59:29]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:04:25]: [+] admin has successfully logged.
+[17/05/2023] - [18:04:28]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:04:53]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:04:55]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:05:08]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:05:09]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:14:41]: [+] admin has successfully logged.
+[17/05/2023] - [18:14:44]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:15:28]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:15:29]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:15:38]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:15:39]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:18:00]: [+] admin has successfully logged.
+[17/05/2023] - [18:18:02]: [+] admin has opened 'Listado Realizan' window.
+[17/05/2023] - [18:18:02]: [+] admin has successfully generated Realizan List.
+[17/05/2023] - [18:18:03]: [+] admin has closed 'Listado Realizan' window.
+[17/05/2023] - [18:18:04]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:18:10]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:18:10]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:18:22]: [+] admin has successfully logged.
+[17/05/2023] - [18:18:24]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:18:30]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:18:30]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:18:48]: [+] admin has successfully logged.
+[17/05/2023] - [18:18:50]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:18:54]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:18:55]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:18:59]: [+] admin has successfully logged.
+[17/05/2023] - [18:19:01]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:19:08]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:19:08]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:19:19]: [+] admin has successfully logged.
+[17/05/2023] - [18:19:21]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:19:26]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:19:27]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:19:43]: [+] admin has successfully logged.
+[17/05/2023] - [18:19:45]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:20:07]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:20:08]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:20:37]: [+] admin has successfully logged.
+[17/05/2023] - [18:20:39]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:20:46]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:20:46]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:22:13]: [+] admin has successfully logged.
+[17/05/2023] - [18:22:15]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:22:29]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:22:29]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:22:50]: [+] admin has successfully logged.
+[17/05/2023] - [18:22:52]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:22:56]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:22:56]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:23:22]: [+] admin has successfully logged.
+[17/05/2023] - [18:23:24]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:24:00]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:24:01]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:24:25]: [+] admin has successfully logged.
+[17/05/2023] - [18:24:28]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:24:42]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:24:44]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:24:49]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:24:49]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:27:44]: [+] admin has successfully logged.
+[17/05/2023] - [18:28:40]: [+] admin has successfully logged.
+[17/05/2023] - [18:28:52]: [+] admin has successfully logged.
+[17/05/2023] - [18:28:54]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:29:04]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:29:04]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:30:37]: [+] admin has successfully logged.
+[17/05/2023] - [18:30:39]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:30:51]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:30:51]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[17/05/2023] - [18:33:09]: [+] admin has successfully logged.
+[17/05/2023] - [18:33:11]: [+] admin has opened 'Alta Realizan' window.
+[17/05/2023] - [18:33:32]: [+] admin has closed 'Alta Realizan' window.
+[17/05/2023] - [18:33:33]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------

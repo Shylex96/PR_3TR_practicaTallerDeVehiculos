@@ -135,11 +135,11 @@ public class AltaRealizan implements ActionListener, WindowListener, ItemListene
 		Calendar calendar = Calendar.getInstance();
 
 		// --- Month ---
-		String[] months = {"Elegir..","Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
+		String[] months = {"Elegir..", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
 				"Octubre", "Noviembre", "Diciembre"};
 		int currentMonth = calendar.get(Calendar.MONTH);
 
-		for (int i = 0; i <= currentMonth; i++) {
+		for (int i = 0; i <= currentMonth +1; i++) {
 			choMes.add(months[i]);
 		}
 
@@ -299,7 +299,7 @@ public class AltaRealizan implements ActionListener, WindowListener, ItemListene
 			// --- Get the selected index of the month Choice and
 			// get the index of the last month in the Choice ---
 			int selectedMonth = choMes.getSelectedIndex() -1; // "-1" In order to avoid months with wrong days
-			int lastMonthIndex = choMes.getItemCount() - 1; // "-1" In order to select last Month.
+			int lastMonthIndex = choMes.getItemCount() - 2; // "-1" In order to select last Month.
 
 			// --- Check if the selected month is the last month in the Choice ---
 			if (selectedMonth == lastMonthIndex) {

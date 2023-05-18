@@ -18,7 +18,7 @@ import java.util.Calendar;
 public class AltaRealizan implements ActionListener, WindowListener, ItemListener {
 
 	// --- General components ---
-	Frame windowAltaRealizan = new Frame("Alta de Realización");
+	Frame windowAltaRealizan = new Frame("Alta de RealizaciÃ³n");
 
 	// --- Labels, TextFields & Buttons components declared ---
 	Label lblNombreCliente = new Label ("Cliente:");
@@ -30,12 +30,12 @@ public class AltaRealizan implements ActionListener, WindowListener, ItemListene
 	Choice choHoras = new Choice();
 	Label lblMinutos = new Label("Minutos:");
 	Choice choMinutos = new Choice();
-	Label lblFecha = new Label("Fecha de realización:");
-	Label lblDia = new Label("Día:");
+	Label lblFecha = new Label("Fecha de realizaciÃ³n:");
+	Label lblDia = new Label("DÃ­a:");
 	Choice choDia = new Choice();
 	Label lblMes = new Label("Mes:");
 	Choice choMes = new Choice();
-	Label lblAnio = new Label("Año:");
+	Label lblAnio = new Label("AÃ±o:");
 	Choice choAnio = new Choice();
 
 	Button btnAceptar = new Button ("Aceptar");
@@ -106,7 +106,7 @@ public class AltaRealizan implements ActionListener, WindowListener, ItemListene
 			choHoras.add(Integer.toString(i));
 		}
 
-		// --- Add minutes option (1-59) --- 
+		// --- Add minutes option (1-59) ---
 		for (int i = 1; i <= 59; i++) {
 			choMinutos.add(Integer.toString(i));
 		}
@@ -133,16 +133,16 @@ public class AltaRealizan implements ActionListener, WindowListener, ItemListene
 		// --- Set the options for the date fields ---
 		// --- Day is on "itemStateChanged" method.
 		Calendar calendar = Calendar.getInstance();
-		
+
 		// --- Month ---
-		String[] months = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
+		String[] months = {"Elegir..","Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
 				"Octubre", "Noviembre", "Diciembre"};
 		int currentMonth = calendar.get(Calendar.MONTH);
-		
+
 		for (int i = 0; i <= currentMonth; i++) {
 			choMes.add(months[i]);
 		}
-		
+
 		// --- Year ---
 		int currentYear = calendar.get(Calendar.YEAR);
 		for (int i = 2023; i <= currentYear; i++) {
@@ -219,7 +219,7 @@ public class AltaRealizan implements ActionListener, WindowListener, ItemListene
 		if (e.getSource().equals(btnCancelar)) {
 
 			valorDialogo = 1;
-			lblAviso.setText("Alta de Realizaciï¿½n cancelada.");
+			lblAviso.setText("Alta de RealizaciÃ¯Â¿Â½n cancelada.");
 			dlgWindow.setVisible(true);
 		}
 
@@ -254,9 +254,9 @@ public class AltaRealizan implements ActionListener, WindowListener, ItemListene
 	private void sendToDB()
 	{
 		/*
-		String cliente = choCliente.getSelectedItem();
-		String[] clienteDefinitivo = cliente.split("-");
-		String clientePosicionUno = clienteDefinitivo[0];
+				String cliente = choCliente.getSelectedItem();
+				String[] clienteDefinitivo = cliente.split("-");
+				String clientePosicionUno = clienteDefinitivo[0];
 		 */
 
 		String cliente = choCliente.getSelectedItem().split("-")[0];
@@ -298,8 +298,8 @@ public class AltaRealizan implements ActionListener, WindowListener, ItemListene
 		if (e.getSource().equals(choMes)) {
 			// --- Get the selected index of the month Choice and
 			// get the index of the last month in the Choice ---
-			int selectedMonth = choMes.getSelectedIndex();
-			int lastMonthIndex = choMes.getItemCount() - 1;
+			int selectedMonth = choMes.getSelectedIndex() -1; // "-1" In order to avoid months with wrong days
+			int lastMonthIndex = choMes.getItemCount() - 1; // "-1" In order to select last Month.
 
 			// --- Check if the selected month is the last month in the Choice ---
 			if (selectedMonth == lastMonthIndex) {

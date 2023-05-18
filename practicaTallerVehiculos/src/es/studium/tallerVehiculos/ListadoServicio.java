@@ -33,7 +33,7 @@ public class ListadoServicio implements ActionListener, WindowListener {
 	Label lblIdServicio = new Label ("ID:");
 	Label lblPrecioServicio = new Label ("Precio:");
 	Label lblTipoServicio = new Label ("Tipo Servicio:");
-	Label lblDescripcion = new Label ("Descripción:");
+	Label lblDescripcion = new Label ("DescripciÃ³n:");
 	TextArea areaDatos = new TextArea (10, 35);
 	Button btnPDF = new Button ("PDF");
 
@@ -125,7 +125,7 @@ public class ListadoServicio implements ActionListener, WindowListener {
 				Cell headerCell1 = createCell("ID:");
 				Cell headerCell2 = createCell("Precio:");
 				Cell headerCell3 = createCell("Tipo de Servicio:");
-				Cell headerCell4 = createCell("Descripción:");
+				Cell headerCell4 = createCell("DescripciÃ³n:");
 
 				// Add header cells to the table
 				table.addHeaderCell(headerCell1);

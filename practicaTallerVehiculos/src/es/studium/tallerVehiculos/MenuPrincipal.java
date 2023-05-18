@@ -1,25 +1,30 @@
 package es.studium.tallerVehiculos;
 
 import java.awt.Color;
+import java.awt.Dialog;
 import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Label;
 import java.awt.Menu;
 import java.awt.MenuBar;
 import java.awt.MenuItem;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.awt.Toolkit;
 
 
-public class MenuPrincipal extends Frame implements WindowListener, ActionListener
+public class MenuPrincipal extends Frame implements WindowListener, ActionListener, KeyListener
 {
 
 	private static final long serialVersionUID = 1L;
 	Image menuPrincipal;
+	Image superAdmin;
 	Toolkit herramienta;
 	// --- General components ---
 	MenuBar barraMenu = new MenuBar();
@@ -47,8 +52,15 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 	MenuItem menuRealizanBaja = new MenuItem("Baja");
 	MenuItem menuRealizanModificar = new MenuItem("Modificar");
 
+	// --- Declared a custom dialog ---
+	Dialog dlgWindow = new Dialog(this, "Aviso", false);
+	Label lblAviso = new Label ("");
+
 	// --- Create a variable to store the type of user ---
 	int tipoUsuario;
+
+	// --- Create a variable to manage modes
+	boolean superAdminMode = false;
 
 	Conexion conexion = new Conexion();
 
@@ -69,16 +81,20 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		setMenuBar(barraMenu);		
 
 		// --- Set general window options ---
-		setTitle("Menú Principal");
+		setTitle("MenÃº Principal");
 		addWindowListener(this);
 		setResizable(false); 
 		setSize(450, 450); 
 		setLocationRelativeTo(null);
 		setBackground(Color.white);
 
+		// --- KeyListener to register key combinations ---
+		addKeyListener(this);
+
 		// --- Paint background with an image ---
 		herramienta = getToolkit();
 		menuPrincipal = herramienta.getImage("images/menuPrincipal.png");
+		superAdmin = herramienta.getImage("images/superAdmin.png");
 
 		// --- Add an action listener to each menu item for "Clientes" ---
 		menuClientesNuevo.addActionListener(this);
@@ -138,18 +154,24 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 
 	public void paint(Graphics g) {
 
-		g.drawImage(menuPrincipal, -5, -5, this);
-
+		if (superAdminMode) {
+			g.drawImage(superAdmin, -25, 0, this);
+		} else {
+			g.drawImage(menuPrincipal, 0, 0, this);
+		}
 	}
 
 	public void windowActivated(WindowEvent we) {}
 	public void windowClosed(WindowEvent we) {}
 	public void windowClosing(WindowEvent we)
 	{
-		// -- Generate message to log file  -- 
-		conexion.logs("[+] " +user, " has successfully logged out.\n--------------------------------------------------------------------------------");
-		System.exit(0);
-
+		if (dlgWindow.isActive()) {
+			dlgWindow.setVisible(false);
+		} else {
+			// -- Generate message to log file  -- 
+			conexion.logs("[+] " +user, " has successfully logged out.\n--------------------------------------------------------------------------------");
+			System.exit(0);
+		}
 	}
 	public void windowDeactivated(WindowEvent we) {}
 	public void windowDeiconified(WindowEvent we) {}
@@ -220,8 +242,64 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		}
 		else if (evento.getSource().equals(menuRealizanModificar)) 
 		{
-			// new... /// dlg: No ilegals actions..
+			//new ...
 			//conexion.logs("[+] " +user, " has opened '...' window.");
+		}
+	}
+	@Override
+	public void keyTyped(KeyEvent e){}
+	@Override
+	public void keyReleased(KeyEvent e){}
+	@Override
+	public void keyPressed(KeyEvent e) {
+
+
+
+		if (tipoUsuario==1) {
+
+			if (e.isControlDown() && e.getKeyCode() == KeyEvent.VK_B) {
+
+				superAdminMode = true;
+				repaint();
+				menuRealizanBaja.setEnabled(true);
+				menuRealizanModificar.setEnabled(true);
+
+				// set visible dialog
+				dlgWindow.setLayout(new FlowLayout());
+				dlgWindow.addWindowListener(this);
+				dlgWindow.setResizable(false);
+				dlgWindow.setSize(300, 75);
+				dlgWindow.setLocationRelativeTo(null);
+				dlgWindow.setBackground(Color.black);
+				lblAviso.setForeground(Color.white);
+				dlgWindow.add(lblAviso);
+				lblAviso.setText("El Modo Super Admin ha sido activado.");
+				dlgWindow.setVisible(true);
+
+				conexion.logs("[+] " + user, " has activated Super Admin Mode.");
+			}
+
+			if (e.isControlDown() && e.getKeyCode() == KeyEvent.VK_N) {
+
+				superAdminMode = false;
+				repaint();
+				menuRealizanBaja.setEnabled(false);
+				menuRealizanModificar.setEnabled(false);
+
+				// set visible dialog
+				dlgWindow.setLayout(new FlowLayout());
+				dlgWindow.addWindowListener(this);
+				dlgWindow.setResizable(false);
+				dlgWindow.setSize(300, 75);
+				dlgWindow.setLocationRelativeTo(null);
+				dlgWindow.setBackground(Color.black);
+				lblAviso.setForeground(Color.white);
+				dlgWindow.add(lblAviso);
+				lblAviso.setText("El Modo Normal ha sido activado.");
+				dlgWindow.setVisible(true);
+
+				conexion.logs("[+] " + user, " has activated Normal Mode.");
+			}
 		}
 	}
 }

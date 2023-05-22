@@ -123,7 +123,7 @@ public class ListadoCliente implements ActionListener, WindowListener {
 				// Create table headers
 				Cell headerCell1 = createCell("ID:");
 				Cell headerCell2 = createCell("Nombre:");
-				Cell headerCell3 = createCell("Tel�fono:");
+				Cell headerCell3 = createCell("Teléfono:");
 				Cell headerCell4 = createCell("Email:");
 
 				// Add header cells to the table

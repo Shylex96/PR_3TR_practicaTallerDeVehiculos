@@ -831,3 +831,155 @@
 [18/05/2023] - [11:59:01]: [+] admin has closed 'Alta Realizan' window.
 [18/05/2023] - [11:59:02]: [+] admin has successfully logged out.
 --------------------------------------------------------------------------------
+[22/05/2023] - [11:41:08]: [+] admin has successfully logged.
+[22/05/2023] - [11:41:10]: [+] admin has opened 'Alta Realizan' window.
+[22/05/2023] - [11:41:11]: [+] admin has closed 'Alta Realizan' window.
+[22/05/2023] - [11:41:12]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:41:12]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:41:13]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:41:15]: [+] admin has opened 'Listado Servicio' window.
+[22/05/2023] - [11:41:15]: [+] admin has successfully generated Service List.
+[22/05/2023] - [11:41:16]: [+] admin has closed 'Listado Servicio' window.
+[22/05/2023] - [11:41:23]: [+] admin has opened 'Listado Cliente' window.
+[22/05/2023] - [11:41:23]: [+] admin has successfully generated Client List.
+[22/05/2023] - [11:41:25]: [+] admin has closed 'Listado Cliente' window.
+[22/05/2023] - [11:41:26]: [+] admin has opened 'Listado Servicio' window.
+[22/05/2023] - [11:41:26]: [+] admin has successfully generated Service List.
+[22/05/2023] - [11:41:28]: [+] admin has closed 'Listado Servicio' window.
+[22/05/2023] - [11:41:33]: [+] admin has opened 'Alta Cliente' window.
+[22/05/2023] - [11:41:50]: [+] admin INSERT INTO clientes VALUES (null, 'Jorge' , '123123123' , 'jorge@gmail.com');
+[22/05/2023] - [11:41:50]: [+] admin has successfully registered in the window 'Alta Cliente'.
+[22/05/2023] - [11:42:07]: [+] admin INSERT INTO clientes VALUES (null, 'Jaime' , '123123121' , 'jLome@gmail.com');
+[22/05/2023] - [11:42:08]: [+] admin has successfully registered in the window 'Alta Cliente'.
+[22/05/2023] - [11:42:08]: [+] admin has successfully registered in the window 'Alta Cliente'.
+[22/05/2023] - [11:42:10]: [+] admin has closed 'Alta Cliente' window.
+[22/05/2023] - [11:42:12]: [+] admin has opened 'Alta Servicio' window.
+[22/05/2023] - [11:42:39]: [+] admin INSERT INTO servicios VALUES (null, 'Reparación' , 'Palanca de cambios no entraba a segunda' , '47.85');
+[22/05/2023] - [11:42:40]: [+] admin has successfully registered in the window 'Alta Servicio'.
+[22/05/2023] - [11:43:03]: [+] admin INSERT INTO servicios VALUES (null, 'Mantenimiento' , 'Examinar para preparar ITV' , '98.78');
+[22/05/2023] - [11:43:03]: [+] admin has successfully registered in the window 'Alta Servicio'.
+[22/05/2023] - [11:43:03]: [+] admin has successfully registered in the window 'Alta Servicio'.
+[22/05/2023] - [11:43:04]: [+] admin has closed 'Alta Servicio' window.
+[22/05/2023] - [11:43:05]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:43:05]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:43:06]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:43:08]: [+] admin has opened 'Alta Realizan' window.
+[22/05/2023] - [11:43:24]: [+] admin INSERT INTO realizan VALUES (null, '3:10', '2023-6-17', '11', '5')
+[22/05/2023] - [11:43:25]: [+] admin has successfully registered in the window 'Alta Realizan'.
+[22/05/2023] - [11:43:44]: [+] admin INSERT INTO realizan VALUES (null, '7:30', '2023-3-28', '12', '6')
+[22/05/2023] - [11:43:45]: [+] admin has successfully registered in the window 'Alta Realizan'.
+[22/05/2023] - [11:43:45]: [+] admin has successfully registered in the window 'Alta Realizan'.
+[22/05/2023] - [11:43:53]: [+] admin INSERT INTO realizan VALUES (null, '7:30', '2023-6-22', '13', '6')
+[22/05/2023] - [11:43:53]: [+] admin has successfully registered in the window 'Alta Realizan'.
+[22/05/2023] - [11:43:53]: [+] admin has successfully registered in the window 'Alta Realizan'.
+[22/05/2023] - [11:43:53]: [+] admin has successfully registered in the window 'Alta Realizan'.
+[22/05/2023] - [11:43:54]: [+] admin has closed 'Alta Realizan' window.
+[22/05/2023] - [11:43:56]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:43:56]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:44:07]: [+] admin is trying to generate a PDF of 'Listado Realizan'.
+[22/05/2023] - [11:44:07]: [+] admin has generated a PDF of 'Listado Realizan'.
+[22/05/2023] - [11:44:11]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:44:13]: [+] admin has opened 'Listado Cliente' window.
+[22/05/2023] - [11:44:13]: [+] admin has successfully generated Client List.
+[22/05/2023] - [11:44:15]: [+] admin has closed 'Listado Cliente' window.
+[22/05/2023] - [11:44:16]: [+] admin has opened 'Listado Servicio' window.
+[22/05/2023] - [11:44:16]: [+] admin has successfully generated Service List.
+[22/05/2023] - [11:44:18]: [+] admin has closed 'Listado Servicio' window.
+[22/05/2023] - [11:44:19]: [+] admin has opened 'Listado Servicio' window.
+[22/05/2023] - [11:44:19]: [+] admin has successfully generated Service List.
+[22/05/2023] - [11:44:21]: [+] admin has closed 'Listado Servicio' window.
+[22/05/2023] - [11:44:22]: [+] admin has opened 'Listado Cliente' window.
+[22/05/2023] - [11:44:22]: [+] admin has successfully generated Client List.
+[22/05/2023] - [11:44:25]: [+] admin has closed 'Listado Cliente' window.
+[22/05/2023] - [11:44:25]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[22/05/2023] - [11:44:42]: [+] admin has successfully logged.
+[22/05/2023] - [11:44:43]: [+] admin has opened 'Listado Cliente' window.
+[22/05/2023] - [11:44:43]: [+] admin has successfully generated Client List.
+[22/05/2023] - [11:44:45]: [+] admin has closed 'Listado Cliente' window.
+[22/05/2023] - [11:44:46]: [+] admin has opened 'Listado Servicio' window.
+[22/05/2023] - [11:44:46]: [+] admin has successfully generated Service List.
+[22/05/2023] - [11:44:49]: [+] admin has closed 'Listado Servicio' window.
+[22/05/2023] - [11:44:51]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:44:51]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:44:55]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:44:56]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[22/05/2023] - [11:45:12]: [+] admin has successfully logged.
+[22/05/2023] - [11:45:14]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:45:14]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:45:15]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:45:15]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[22/05/2023] - [11:45:20]: [+] admin has successfully logged.
+[22/05/2023] - [11:45:22]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:45:22]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:45:25]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:45:27]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:45:27]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:45:28]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:45:28]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[22/05/2023] - [11:45:36]: [+] admin has successfully logged.
+[22/05/2023] - [11:45:38]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:45:38]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:45:42]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:45:43]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[22/05/2023] - [11:45:47]: [+] admin has successfully logged.
+[22/05/2023] - [11:45:50]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:45:50]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:45:55]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:45:56]: [+] admin has opened 'Listado Cliente' window.
+[22/05/2023] - [11:45:56]: [+] admin has successfully generated Client List.
+[22/05/2023] - [11:45:57]: [+] admin has closed 'Listado Cliente' window.
+[22/05/2023] - [11:45:58]: [+] admin has opened 'Listado Servicio' window.
+[22/05/2023] - [11:45:58]: [+] admin has successfully generated Service List.
+[22/05/2023] - [11:46:00]: [+] admin has closed 'Listado Servicio' window.
+[22/05/2023] - [11:46:01]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:46:01]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:46:24]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:46:26]: [+] admin has opened 'Baja Servicio' window.
+[22/05/2023] - [11:46:35]: [+] admin has closed 'Baja Servicio' window.
+[22/05/2023] - [11:46:40]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[22/05/2023] - [11:46:43]: [+] admin has successfully logged.
+[22/05/2023] - [11:46:46]: [+] admin has opened 'Baja Cliente' window.
+[22/05/2023] - [11:46:50]: [+] admin has closed 'Baja Cliente' window.
+[22/05/2023] - [11:46:54]: [+] admin has opened 'Modificar Servicio' window.
+[22/05/2023] - [11:47:02]: [+] admin UPDATE servicios SET tipoServicio ='Reparaciones', descripcionServicio = 'Palanca de cambios no entraba a segunda', precioServicio = '47.85' WHERE idServicio =5;
+[22/05/2023] - [11:47:05]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:47:05]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:47:09]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:47:10]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[22/05/2023] - [11:47:16]: [+] admin has successfully logged.
+[22/05/2023] - [11:47:18]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:47:18]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:47:20]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:47:21]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[22/05/2023] - [11:47:25]: [+] admin has successfully logged.
+[22/05/2023] - [11:47:27]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:47:27]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:47:29]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:47:29]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[22/05/2023] - [11:47:34]: [+] admin has successfully logged.
+[22/05/2023] - [11:47:36]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:47:36]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:47:39]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:47:39]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------
+[22/05/2023] - [11:47:43]: [+] admin has successfully logged.
+[22/05/2023] - [11:47:45]: [+] admin has opened 'Listado Realizan' window.
+[22/05/2023] - [11:47:45]: [+] admin has successfully generated Realizan List.
+[22/05/2023] - [11:47:51]: [+] admin has closed 'Listado Realizan' window.
+[22/05/2023] - [11:47:52]: [+] admin has opened 'Listado Servicio' window.
+[22/05/2023] - [11:47:52]: [+] admin has successfully generated Service List.
+[22/05/2023] - [11:47:56]: [+] admin has closed 'Listado Servicio' window.
+[22/05/2023] - [11:47:58]: [+] admin has opened 'Listado Cliente' window.
+[22/05/2023] - [11:47:58]: [+] admin has successfully generated Client List.
+[22/05/2023] - [11:48:00]: [+] admin has closed 'Listado Cliente' window.
+[22/05/2023] - [11:48:01]: [+] admin has successfully logged out.
+--------------------------------------------------------------------------------

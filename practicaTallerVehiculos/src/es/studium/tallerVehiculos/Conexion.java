@@ -116,7 +116,7 @@ public class Conexion
 			ResultSet resultado = statement.executeQuery(sentencia);
 			while(resultado.next()) {
 				// Append add
-				areaDatos.append(resultado.getString("idCliente")+"             \t");
+				areaDatos.append(resultado.getString("idCliente")+"         \t");
 				areaDatos.append(resultado.getString("nombreCliente")+"         \t");
 				if (resultado.getString("telefonoCliente").equals("")) {
 					areaDatos.append("\t\t");
@@ -356,9 +356,9 @@ public class Conexion
 			ResultSet resultado = statement.executeQuery(sentencia);
 			while(resultado.next()) {
 				// Append add
-				areaDatosRealizan.append(resultado.getString("nombreCliente")+"  \t");
-				areaDatosRealizan.append(resultado.getString("tipoServicio")+"      \t");
-				areaDatosRealizan.append(resultado.getString("horasEmpleadas")+"     \t");
+				areaDatosRealizan.append(resultado.getString("nombreCliente")+"      \t");
+				areaDatosRealizan.append(resultado.getString("tipoServicio")+"    \t");
+				areaDatosRealizan.append(resultado.getString("horasEmpleadas")+"        \t");
 
 				// Convert date format
 	            String fechaOriginal = resultado.getString("fechaServiciosRealizados");

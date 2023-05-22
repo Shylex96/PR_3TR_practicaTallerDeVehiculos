@@ -122,7 +122,7 @@ public class ListadoRealizan implements ActionListener, WindowListener {
 				Cell headerCell1 = createCell("Cliente:");
 				Cell headerCell2 = createCell("Tipo de Servicio:");
 				Cell headerCell3 = createCell("Tiempo Empleado:");
-				Cell headerCell4 = createCell("Fecha de Realizaci�n:");
+				Cell headerCell4 = createCell("Fecha de Realización:");
 
 				// Add header cells to the table
 				table.addHeaderCell(headerCell1);

@@ -33,6 +33,7 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 	Menu menuClientes = new Menu("Clientes");
 	Menu menuServicios = new Menu("Servicios");
 	Menu menuRealizan = new Menu("Realizan");
+	Menu menuAyuda = new Menu("Ayuda");
 
 	// --- Menu items for "Clientes" ---
 	MenuItem menuClientesNuevo = new MenuItem("Nuevo");
@@ -51,6 +52,9 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 	MenuItem menuRealizanListado = new MenuItem("Listado");
 	MenuItem menuRealizanBaja = new MenuItem("Baja");
 	MenuItem menuRealizanModificar = new MenuItem("Modificar");
+	
+	// --- Menu items for "Ayuda" ---
+	MenuItem menuAyudaHelp = new MenuItem("Manual");
 
 	// --- Declared a custom dialog ---
 	Dialog dlgWindow = new Dialog(this, "Aviso", false);
@@ -113,6 +117,9 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		menuRealizanListado.addActionListener(this);
 		menuRealizanBaja.addActionListener(this);
 		menuRealizanModificar.addActionListener(this);
+		
+		// --- Add an action listener to "Ayuda" item
+		menuAyudaHelp.addActionListener(this);
 
 		// --- Add menu items to their corresponding menus ---
 		// If I want to disable them: menuClientesListado.setEnabled(false);
@@ -147,6 +154,9 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 			menuRealizanModificar.setEnabled(false);
 		}
 		barraMenu.add(menuRealizan);
+		
+		menuAyuda.add(menuAyudaHelp);
+		barraMenu.add(menuAyuda);
 
 		// --- Set window visible --- 
 		setVisible(true); 
@@ -244,6 +254,8 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		{
 			//new ...
 			//conexion.logs("[+] " +user, " has opened '...' window.");
+		} else if (evento.getSource().equals(menuAyudaHelp)) {
+			
 		}
 	}
 	@Override

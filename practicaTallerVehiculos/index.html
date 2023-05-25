@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programa de Gestión - Ayuda</title>
+	<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1686/1686816.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+			background-color: rgb(51, 51, 51);
+    }
+    
+    header {
+      background-color: #202123;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav {
+      background-color: #444;
+      padding: 10px;
+    }
+    
+    table {
+      margin: 0 auto;
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    
+    th, td {
+      padding: 10px;
+      border: 3px solid #444;
+      box-sizing: border-box;
+      width: 33.33%;
+      background-color: #202123;
+      color: #333;
+    }
+    
+    th {
+      background-color: #333;
+      color: #fff;
+      cursor: default;
+    }
+    
+    a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+    }
+    
+    a:hover {
+      font-weight: bold;
+    }
+    
+    p#bienvenida {
+			color: #fff;
+      padding: 20px;
+			font-weight: 600;
+			font-size: 1.5em;
+    }
+    
+    section {
+			color: #fff;
+      padding: 20px;
+      display: none;
+    }
+    
+    .showSection {
+      display: block;
+    }
+
+		table ul li {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Programa de Gestión - Ayuda</h1>
+  </header>
+
+  <nav>
+    <table>
+      <tr>
+        <th>Clientes</th>
+        <th>Servicios</th>
+        <th>Realizan</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li><a href="#altaCliente" onclick="showSection('altaClienteSection')">Alta Cliente</a></li>
+            <li><a href="#listadoCliente" onclick="showSection('listadoClienteSection')">Listado Cliente</a></li>
+            <li><a href="#bajaCliente" onclick="showSection('bajaClienteSection')">Baja Cliente</a></li>
+            <li><a href="#modificarCliente" onclick="showSection('modificarClienteSection')">Modificar Cliente</a></li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li><a href="#altaServicios" onclick="showSection('altaServiciosSection')">Alta Servicios</a></li>
+            <li><a href="#listadoServicios" onclick="showSection('listadoServiciosSection')">Listado Servicios</a></li>
+            <li><a href="#bajaServicios" onclick="showSection('bajaServiciosSection')">Baja Servicios</a></li>
+            <li><a href="#modificarServicios" onclick="showSection('modificarServiciosSection')">Modificar Servicios</a></li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li><a href="#altaRealizan" onclick="showSection('altaRealizanSection')">Alta Realizan</a></li>
+            <li><a href="#listadoRealizan" onclick="showSection('listadoRealizanSection')">Listado Realizan</a></li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </nav>
+  
+	<p id="bienvenida">Seleccione una opción del menú de navegación para ver más detalles.</p>
+
+  <section id="altaClienteSection">
+    <h2>Alta Cliente</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+  </section>
+  
+  <section id="listadoClienteSection">
+    <h2>Listado Cliente</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+  </section>
+  
+  <section id="bajaClienteSection">
+    <h2>Baja Cliente</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+  </section>
+  
+  <section id="modificarClienteSection">
+    <h2>Modificar Cliente</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+  </section>
+  
+  <section id="altaServiciosSection">
+    <h2>Alta Servicios</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+  </section>
+  
+  <section id="listadoServiciosSection">
+    <h2>Listado Servicios</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+  </section>
+  
+  <section id="bajaServiciosSection">
+    <h2>Baja Servicios</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+  </section>
+  
+  <section id="modificarServiciosSection">
+    <h2>Modificar Servicios</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+  </section>
+  
+  <section id="altaRealizanSection">
+    <h2>Alta Realizan</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+  </section>
+  
+  <section id="listadoRealizanSection">
+    <h2>Listado Realizan</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+  </section>
+  
+  <script>
+    function showSection(sectionId) {
+      // Ocultar todas las secciones
+      let sections = document.getElementsByTagName("section");
+      for (let i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+      }
+      
+      // Ocultar el párrafo "bienvenida"
+      let bienvenida = document.getElementById("bienvenida");
+      bienvenida.style.display = "none";
+      
+      // Mostrar la sección seleccionada
+      let section = document.getElementById(sectionId);
+      if (section) {
+        section.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

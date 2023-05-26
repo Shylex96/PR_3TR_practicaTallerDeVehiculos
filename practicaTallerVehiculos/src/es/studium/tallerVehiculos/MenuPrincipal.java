@@ -1,6 +1,7 @@
 package es.studium.tallerVehiculos;
 
 import java.awt.Color;
+import java.awt.Desktop;
 import java.awt.Dialog;
 import java.awt.FlowLayout;
 import java.awt.Frame;
@@ -16,6 +17,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.File;
+import java.io.IOException;
 import java.awt.Toolkit;
 
 
@@ -52,7 +55,7 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 	MenuItem menuRealizanListado = new MenuItem("Listado");
 	MenuItem menuRealizanBaja = new MenuItem("Baja");
 	MenuItem menuRealizanModificar = new MenuItem("Modificar");
-	
+
 	// --- Menu items for "Ayuda" ---
 	MenuItem menuAyudaHelp = new MenuItem("Manual");
 
@@ -117,7 +120,7 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		menuRealizanListado.addActionListener(this);
 		menuRealizanBaja.addActionListener(this);
 		menuRealizanModificar.addActionListener(this);
-		
+
 		// --- Add an action listener to "Ayuda" item
 		menuAyudaHelp.addActionListener(this);
 
@@ -154,7 +157,7 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 			menuRealizanModificar.setEnabled(false);
 		}
 		barraMenu.add(menuRealizan);
-		
+
 		menuAyuda.add(menuAyudaHelp);
 		barraMenu.add(menuAyuda);
 
@@ -255,9 +258,23 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 			//new ...
 			//conexion.logs("[+] " +user, " has opened '...' window.");
 		} else if (evento.getSource().equals(menuAyudaHelp)) {
-			
+			try {
+				
+				String rutaHTML = "C:\\Users\\Studi\\OneDrive\\Escritorio\\Asignaturas\\PR_3TRIMESTRE\\practicaTallerVehiculos\\index.html";
+
+				// Verificar si el escritorio es compatible y está disponible
+				if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+					// Abrir el archivo HTML en el navegador predeterminado
+					Desktop.getDesktop().browse(new File(rutaHTML).toURI());
+				} else {
+					System.out.println("El escritorio no es compatible o no se puede abrir el navegador.");
+				}
+			} catch (IOException e) {
+				System.out.println("Error al abrir el archivo HTML: " + e.getMessage());
+			}
 		}
 	}
+
 	@Override
 	public void keyTyped(KeyEvent e){}
 	@Override

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Programa de Gestión - Ayuda</title>
-	<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1686/1686816.png">
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1686/1686816.png">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-			background-color: rgb(51, 51, 51);
+      background-color: rgb(51, 51, 51);
     }
-    
+
     header {
       background-color: #202123;
       color: #fff;
@@ -18,20 +19,21 @@
       display: flex;
       justify-content: center;
     }
-    
+
     nav {
       background-color: #444;
       padding: 10px;
     }
-    
+
     table {
       margin: 0 auto;
       width: 100%;
       border-collapse: collapse;
       table-layout: fixed;
     }
-    
-    th, td {
+
+    th,
+    td {
       padding: 10px;
       border: 3px solid #444;
       box-sizing: border-box;
@@ -39,45 +41,47 @@
       background-color: #202123;
       color: #333;
     }
-    
+
     th {
       background-color: #333;
       color: #fff;
       cursor: default;
     }
-    
+
     a {
       color: #fff;
       text-decoration: none;
       display: block;
     }
-    
+
     a:hover {
       font-weight: bold;
     }
-    
+
     p#bienvenida {
-			color: #fff;
+      color: #fff;
       padding: 20px;
-			font-weight: 600;
-			font-size: 1.5em;
+      font-weight: 600;
+      font-size: 1.5em;
     }
-    
+
     section {
-			color: #fff;
+      color: #fff;
       padding: 20px;
       display: none;
+      text-align: justify;
     }
-    
+
     .showSection {
       display: block;
     }
 
-		table ul li {
+    table ul li {
       color: #fff;
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Programa de Gestión - Ayuda</h1>
@@ -104,7 +108,8 @@
             <li><a href="#altaServicios" onclick="showSection('altaServiciosSection')">Alta Servicios</a></li>
             <li><a href="#listadoServicios" onclick="showSection('listadoServiciosSection')">Listado Servicios</a></li>
             <li><a href="#bajaServicios" onclick="showSection('bajaServiciosSection')">Baja Servicios</a></li>
-            <li><a href="#modificarServicios" onclick="showSection('modificarServiciosSection')">Modificar Servicios</a></li>
+            <li><a href="#modificarServicios" onclick="showSection('modificarServiciosSection')">Modificar Servicios</a>
+            </li>
           </ul>
         </td>
         <td>
@@ -116,59 +121,261 @@
       </tr>
     </table>
   </nav>
-  
-	<p id="bienvenida">Seleccione una opción del menú de navegación para ver más detalles.</p>
+
+  <p id="bienvenida">Seleccione una opción del menú de navegación para ver más detalles.</p>
 
   <section id="altaClienteSection">
     <h2>Alta Cliente</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+    <p>
+      Una vez que hemos hecho clic en "Alta Cliente" el programa abrirá una nueva ventana que nos permitirá rellenar
+      los datos necesarios. Es importante tener en cuenta algunas <b><u>restricciones</u></b> como, por ejemplo, que el
+      nombre del
+      cliente no puede superar los 25 caracteres. En caso de tener un nombre largo, se recomienda hacer uso de
+      abreviaturas o acotaciones (por ejemplo, “María de los Reyes” podría abreviarse como “Mª Reyes”).
+      También es importante resaltar que el nombre del cliente es un campo <b><u>obligatorio.</u></b>
+    </p>
+
+    <p>
+      Se debe rellenar de forma obligatoria el nombre, los datos de contacto sólo es obligatorio uno de los dos. Esto
+      quiere decir que se pueden rellenar ambos campos (teléfono y correo electrónico) o únicamente uno de estos. En
+      caso de rellenar el teléfono es importante que sea un número válido (9 dígitos y no puede haber caracteres no
+      numéricos) y en caso de rellenar el correo electrónico este debe tener un formato estandarizado como por ejemplo:
+      "ejemplo@gmail.com".
+
+    </p>
+    <p>
+      Si hemos completado los campos de alta del cliente debidamente, el programa nos mostrará un mensaje que nos
+      indicará que hemos hecho <b><u>correctamente</u></b> el alta del cliente. Al cerrar la ventana del diálogo seguirá
+      activa la ventana de “Alta de Cliente” por si queremos seguir dando de alta a nuevos clientes. En caso de que no,
+      podemos simplemente cerrar la ventana con la “X” situada en la esquina superior derecha.
+      También podremos hacer clic en cualquier momento en “Cancelar” y <b><u>cancelaremos</u></b> el alta del cliente,
+      devolviéndonos al menú principal.
+    </p>
+
+    <p>
+      Opción disponible si entramos como <b><u>usuario</u></b> o como <b><u>administrador.</u></b>
+    </p>
   </section>
-  
+
   <section id="listadoClienteSection">
     <h2>Listado Cliente</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+    <p>
+      Si hacemos clic en Listado aparecerá una ventana que mostrará el listado de clientes que actualmente están dados
+      de alta y guardados en la <b><u>Base de Datos.</u></b> De esta manera, podremos acceder a la información de los
+      clientes y utilizarla para cualquier tipo de gestión que necesitemos. Además, se ha añadido la función de exportar
+      esta lista en formato PDF haciendo clic en el botón correspondiente que, situado en la parte inferior central.
+    </p>
+    <p>
+      Si hacemos clic en el botón "PDF" se extraerán todos los datos que se encuentran en el área de texto y de forma
+      automática se generará un archivo PDF donde se volcarán todos los datos con estilo, es decir, con cabeceras, en
+      tabla, con justificación de márgenes y centrado o lo que es lo mismo, un archivo totalmente funcional y
+      profesional.
+    </p>
+
+    <p>
+      Opción disponible si entramos únicamente como <b><u>administrador.</u></b>
+    </p>
   </section>
-  
+
   <section id="bajaClienteSection">
     <h2>Baja Cliente</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+    <p>
+      Si hacemos clic en “Baja” veremos que se nos desplegará una ventana donde podremos elegir el cliente a eliminar.
+      Por defecto estará la opción “Elegir cliente...” para asegurarse de que no elegimos un cliente por error. Si
+      desplegamos la lista veremos todos los clientes que tenemos almacenados en la <b><u>Base de Datos.</u></b>
+    </p>
+
+    <p>
+      Para eliminar un cliente, debemos seleccionarlo y pulsar el botón <i>“Eliminar”</i>. El programa mostrará una
+      ventana de <b><u>confirmación</u></b> en la que se nos pedirá que confirmemos si deseamos eliminar al cliente. La
+      ventana de confirmación tendrá un fondo rojo para resaltar su <u>importancia</u>. Si hacemos clic en el botón
+      “Sí”, el cliente será <b><u>eliminado</u></b> y se mostrará un mensaje de confirmación en color verde. Es
+      importante recalcar que esta acción es <b><u>irreversible</u></b> y <u>no se podrá recuperar los datos del cliente
+        eliminado de <b>ninguna manera.</b></u> Por ello, deberemos estar totalmente seguro de que queremos darle de
+      baja.
+    </p>
+
+    <p>
+      Una vez eliminado el cliente, el programa nos redirigirá automáticamente a la lista de clientes actualizada. Si
+      desplegamos la lista, podremos observar que el cliente eliminado ya no aparece en ella. Así mismo, tampoco
+      aparecerá en el listado de Clientes.
+    </p>
+
+    <p>
+      Opción disponible si entramos únicamente como <b><u>administrador.</u></b>
+    </p>
   </section>
-  
+
   <section id="modificarClienteSection">
     <h2>Modificar Cliente</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+    <p>
+      Si nos dirigimos al apartado de “Modificación” veremos que el diseño es muy similar al de baja pero, con algunas
+      diferencias.
+      Lo primero será seleccionar el cliente que se desea modificar. Al seleccionar al cliente, podremos acceder a la
+      opción de modificar haciendo clic en el botón correspondiente. Esto abrirá una nueva ventana que cargará los datos
+      del cliente en sus respectivos campos. En caso de que algún campo no tenga información, aparecerá vacío.
+    </p>
+
+    <p>
+      Si cambiamos algún campo o añadimos información que no estuviera, haciendo clic en el botón “Modificar” se
+      efectuarán los cambios. Si la modificación se realiza correctamente, aparecerá un diálogo de confirmación y luego
+      nos devolverá a la lista
+      desplegable para que podamos continuar modificando a otros clientes si lo deseamos. Si accedemos a la lista
+      veremos que los cambios se han realizado correctamente. También podríamos verlo volviendo a darle a modificar.
+    </p>
+
+    <p>
+      Opción disponible si entramos únicamente como <b><u>administrador.</u></b>
+    </p>
   </section>
-  
+
   <section id="altaServiciosSection">
     <h2>Alta Servicios</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+    <p>
+      Cuando se haga clic en el botón “Nuevo”, se abrirá una ventana nueva que contendrá los siguientes campos para
+      rellenar: “Tipo de Servicio”, “Descripción del Servicio” y “Precio del Servicio”.
+      El campo “Tipo de Servicio” se utilizará para proporcionar una breve indicación sobre el servicio que se está
+      ofreciendo, por ejemplo, “Reparación”, “Mantenimiento”, “Revisión”, etc.
+    </p>
+
+    <p>
+      El campo “Descripción del Servicio” se utilizará para proporcionar información más detallada sobre el servicio,
+      como por ejemplo "Pinchazo en la rueda delantera".
+      Por último, el campo “Precio del Servicio” se utilizará para indicar el costo del servicio, con un valor numérico
+      como “29”, “130” o “14.99”, entre otros posibles valores.
+    </p>
+
+    <p>
+      El único campo que tiene algunas verificaciones especiales es el de “Precio del Servicio”, que comprobará el tipo
+      de valor (admite únicamente números). Este campo admite números sin decimales de hasta 4 dígitos, es decir: “1”,
+      “10”, “100” y “1000” (mil o superior debe ir sin punto). El campo también admite decimales, con un máximo de 2, es
+      decir: “12.59” o “1453.23” serían valores válidos.
+      Los decimales se deben escribir con un punto (“.”) y no con una coma (“,”). Si lo escribimos con coma o con un
+      formato no válido o no numérico, el programa nos abrirá un mensaje de error.
+    </p>
+
+    <p>
+      Es importante tener en cuenta que en el único momento en el que se debe poner un punto (“.”) es para separar con
+      decimales, por lo que si queremos escribir un precio como “1627.95” y escribimos “1.627,95” o “1.627.95” el
+      programa nos dará error. Si hicimos un alta correcta el programa nos avisará un mensaje emergente que nos
+      confirmará que el servicio fue dado de alta correctamente.
+    </p>
+
+    <p><b><u>En esta ventana no puede haber ningún campo vacío.</u></b></p>
+    <p>
+      Opción disponible si entramos como <b><u>usuario</u></b> o como <b><u>administrador.</u></b>
+    </p>
   </section>
-  
+
   <section id="listadoServiciosSection">
     <h2>Listado Servicios</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+    <p>
+      Al hacer clic en "Listado Servicios" se desplegará una ventana con toda la información sobre los servicios que se
+      hayan dado de alta. Esto incluye precio, tipo del servicio y una breve descripción.
+    </p>
+
+    <p>
+      Si hacemos clic en el botón "PDF" se extraerán todos los datos que se encuentran en el área de texto y de forma
+      automática se generará un archivo PDF donde se volcarán todos los datos con estilo, es decir, con cabeceras, en
+      tabla, con justificación de márgenes y centrado o lo que es lo mismo, un archivo totalmente funcional y
+      profesional.
+    </p>
+
+    <p>
+      Opción disponible si entramos únicamente como <b><u>administrador.</u></b>
+    </p>
   </section>
-  
+
   <section id="bajaServiciosSection">
     <h2>Baja Servicios</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+    <p>
+      Si se hace clic en el menú de “Baja de Servicios” se accederá a esta ventana donde podremos elegir de la lista el
+      servicio que se desee <b><u>eliminar.</u></b>
+    </p>
+
+    <p>
+      En el desplegable se verá el “Tipo de Servicio” que hemos puesto y el coste de este, a modo de referencia. Similar
+      al apartado de “Clientes”, al hacer clic en el botón “Eliminar” nos preguntará si estamos seguro de ello.
+      Al hacer clic en el botón “Sí” la acción se confirmará y se eliminará <b><u>permanentemente</u></b> y de forma
+      <b><u>irreversible.</u></b>
+      Por ello, tener especial cuidado sobre qué servicio se desea borrar. Tras esto aparecerá una ventana que
+      confirmará que la acción realizada se hizo correctamente.
+    </p>
+
+    <p>
+      Al cerrar el mensaje nos devolverá a la ventana de “Baja de servicios” por si se desea continuar eliminando otros
+      servicios. El servicio eliminado ya no aparecerá más en lista.
+    </p>
+
+    <p>
+      Opción disponible si entramos únicamente como <b><u>administrador.</u></b>
+    </p>
   </section>
-  
+
   <section id="modificarServiciosSection">
     <h2>Modificar Servicios</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+    <p>
+      Si hacemos clic en la ventana de modificación esta nos permitirá cambiar algún campo de un alta de servicios que
+      se haya introducido mal, como por ejemplo el costo del servicio de alguna reparación.
+      Para ello simplemente seleccionar el servicio a modificar y hacer clic en el botón “Modificar” para que una nueva
+      ventana aparezca.
+    </p>
+
+    <p>
+      Esta ventana mostrará la información del servicio, lo que incluye: Tipo de Servicio, Descripción del Servicio y
+      Precio del Servicio. Aquí se podrá cambiar los datos que se necesiten y haciendo clic en el botón “Modificar” se
+      aplicarán los cambios.
+      Si se intenta hacer cualquier cambio en el Precio del Servicio que no se admitiera (como por ejemplo el uso de
+      comas o valores no admitidos) el programa nos mostrará un mensaje de error y se tendrá que rectificar para poder
+      hacer efectivo el cambio.
+    </p>
+
+    <p>
+      Opción disponible si entramos únicamente como <b><u>administrador.</u></b>
+    </p>
   </section>
-  
+
   <section id="altaRealizanSection">
     <h2>Alta Realizan</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+    <p>
+      Si hacemos clic en Realizan nos permitirá crear una nueva alta de forma más compleja. Esta tiene el propósito
+      principal de enlazar un cliente con un servicio ya creado. Además, nos permitirá elegir el tiempo empleado en
+      horas y minutos con un mínimo de "1 minuto". A su vez, cuenta con la función de añadir la fecha en la que se
+      realizó, eligiendo siempre fechas pasadas o presentes pero nunca una fecha superior al día, mes y año en el que se
+      encuentra en el momento de la realización.
+    </p>
+
+    <p>
+      Esta alta depende completamente de que haya un cliente y un servicio creados previamente para poder enlazarlos o
+      no será posible asignarle el alta de la realización.
+      El día no estará disponible para ser seleccionado hasta que no hayamos elegido un mes, que entonces detectará si
+      es el mes en el que nos encontramos o no. Si es el mes en el que nos encontramos, cargará los días disponibles
+      hasta la fecha y nunca posteriores a la fecha actual. En cambio, si es un mes anterior cargará todos los días que
+      tuviera ese mes.
+    </p>
+
+    <p>
+      Opción disponible si entramos como <b><u>usuario</u></b> o como <b><u>administrador.</u></b>
+    </p>
   </section>
-  
+
   <section id="listadoRealizanSection">
     <h2>Listado Realizan</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione magnam exercitationem consequuntur vitae delectus dolores doloremque sapiente tempora corrupti omnis iusto cupiditate in, nobis sed quia, illum autem accusamus distinctio.</p>
+    <p>
+      Si entramos en el Listado tendremos acceso a ver un área de texto con información del cliente servicio, tiempo
+      empleado y fecha de realización. A su vez, tendremos disponible al igual que en los demás listados la opción de
+      descargar un archivo PDF con toda la información del área de texto. Esta función se ejecutará de la misma forma
+      que los anteriores listados. Se generará un archivo PDF donde se volcarán todos los datos con estilo, es decir,
+      con cabeceras, en tabla, con justificación de márgenes y centrado o lo que es lo mismo, un archivo totalmente
+      funcional y
+      profesional.
+    </p>
+
+    <p>
+      Opción disponible si entramos únicamente como <b><u>administrador.</u></b>
+    </p>
   </section>
-  
+
   <script>
     function showSection(sectionId) {
       // Ocultar todas las secciones
@@ -176,11 +383,11 @@
       for (let i = 0; i < sections.length; i++) {
         sections[i].style.display = "none";
       }
-      
+
       // Ocultar el párrafo "bienvenida"
       let bienvenida = document.getElementById("bienvenida");
       bienvenida.style.display = "none";
-      
+
       // Mostrar la sección seleccionada
       let section = document.getElementById(sectionId);
       if (section) {
@@ -189,4 +396,5 @@
     }
   </script>
 </body>
+
 </html>

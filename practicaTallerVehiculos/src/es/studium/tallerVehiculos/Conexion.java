@@ -377,7 +377,7 @@ public class Conexion
 
 		try {
 
-			FileWriter fw = new FileWriter("registros.log", true);
+			FileWriter fw = new FileWriter("movimientos.log", true);
 			LocalDate fechaActual = LocalDate.now();
 			LocalTime horaActual = LocalTime.now();
 			DateTimeFormatter formatterFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");

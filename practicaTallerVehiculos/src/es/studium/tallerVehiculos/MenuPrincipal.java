@@ -1,7 +1,6 @@
 package es.studium.tallerVehiculos;
 
 import java.awt.Color;
-import java.awt.Desktop;
 import java.awt.Dialog;
 import java.awt.FlowLayout;
 import java.awt.Frame;
@@ -17,10 +16,10 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.io.File;
 import java.io.IOException;
 import java.awt.Toolkit;
 
+import java.net.URISyntaxException;
 
 public class MenuPrincipal extends Frame implements WindowListener, ActionListener, KeyListener
 {
@@ -191,6 +190,10 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 	public void windowIconified(WindowEvent we) {}
 	public void windowOpened(WindowEvent we) {}
 
+
+
+
+
 	@Override
 	public void actionPerformed(ActionEvent evento) 
 	{
@@ -258,8 +261,11 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 			//new ...
 			//conexion.logs("[+] " +user, " has opened '...' window.");
 		} else if (evento.getSource().equals(menuAyudaHelp)) {
+			goToURL("file:///C:/Users/Studi/OneDrive/Escritorio/Asignaturas/PR_3TRIMESTRE/practicaTallerVehiculos/index.html");
+			conexion.logs("[+] " + user, " has opened Help File.");
+			/*
 			try {
-				
+
 				String rutaHTML = "C:\\Users\\Studi\\OneDrive\\Escritorio\\Asignaturas\\PR_3TRIMESTRE\\practicaTallerVehiculos\\index.html";
 
 				// Verificar si el escritorio es compatible y está disponible
@@ -271,7 +277,7 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 				}
 			} catch (IOException e) {
 				System.out.println("Error al abrir el archivo HTML: " + e.getMessage());
-			}
+			}*/
 		}
 	}
 
@@ -328,6 +334,28 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 				dlgWindow.setVisible(true);
 
 				conexion.logs("[+] " + user, " has activated Normal Mode.");
+			}
+		}
+	}
+	public static void goToURL(String URL) {
+
+		if (java.awt.Desktop.isDesktopSupported())
+		{
+			
+			java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+
+			if (desktop.isSupported(java.awt.Desktop.Action.BROWSE)) 
+			{
+				try
+				{
+					java.net.URI uri = new java.net.URI(URL);
+					desktop.browse(uri);
+				}
+
+				catch (URISyntaxException | IOException ex)
+				{
+					System.out.println(ex.getMessage());
+				}
 			}
 		}
 	}

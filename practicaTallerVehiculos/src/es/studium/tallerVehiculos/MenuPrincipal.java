@@ -87,7 +87,7 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 		setMenuBar(barraMenu);		
 
 		// --- Set general window options ---
-		setTitle("MenÃº Principal");
+		setTitle("Menú Principal");
 		addWindowListener(this);
 		setResizable(false); 
 		setSize(450, 450); 
@@ -261,7 +261,11 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 			//new ...
 			//conexion.logs("[+] " +user, " has opened '...' window.");
 		} else if (evento.getSource().equals(menuAyudaHelp)) {
-			goToURL("file:///C:/Users/Studi/OneDrive/Escritorio/Asignaturas/PR_3TRIMESTRE/practicaTallerVehiculos/index.html");
+			
+			//goToURL("file:///C:/Users/Studi/OneDrive/Escritorio/Asignaturas/PR_3TRIMESTRE/practicaTallerVehiculos/index.html");
+			goToURL("file:///C:/Users/Shylex/Desktop/Studium%20Desktop/PR/practicaTallerVehiculos/index.html");
+			
+			// C:\Users\Shylex\Desktop\Studium Desktop\PR\practicaTallerVehiculos
 			conexion.logs("[+] " + user, " has opened Help File.");
 			/*
 			try {

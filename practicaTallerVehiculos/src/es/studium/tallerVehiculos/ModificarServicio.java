@@ -24,7 +24,7 @@ public class ModificarServicio implements ActionListener, WindowListener {
 	Label lblCambiarDatos = new Label("Modifique los campos del Servicio:");
 	Label lblTipoServicio = new Label("Tipo Servicio:");
 	TextField txtTipoServicio = new TextField(10);
-	Label lblDescripcionServicio = new Label("DescripciÃ³n del Servicio:");
+	Label lblDescripcionServicio = new Label("Descripción del Servicio:");
 	TextField txtDescripcionServicio = new TextField(10);
 	Label lblPrecioServicio = new Label("Precio del Servicio:");
 	TextField txtPrecioServicio = new TextField(10);
@@ -196,7 +196,7 @@ public class ModificarServicio implements ActionListener, WindowListener {
 			// --- If user clic to cancel modification button ---
 		} else if (e.getSource().equals(btnCancelarModificacion)) {
 
-			lblAviso.setText("ModificaciÃ³n de Servicio cancelada.");
+			lblAviso.setText("Modificación de Servicio cancelada.");
 			dlgAviso.setVisible(true);
 
 			valorDialogo = 2;
@@ -217,7 +217,7 @@ public class ModificarServicio implements ActionListener, WindowListener {
 
 				valorDialogo = 4;
 				// --- Show error dialog ---
-				lblAviso.setText("Error en la ModificaciÃ³n");
+				lblAviso.setText("Error en la Modificación");
 				dlgAviso.setBackground(Color.red);
 				dlgAviso.setVisible(true);
 
@@ -226,7 +226,7 @@ public class ModificarServicio implements ActionListener, WindowListener {
 
 				// --- If the SQL statement executed correctly ---
 				// --- Show success dialog ---
-				lblAviso.setText("Cambios realizados con Ã©xito.");
+				lblAviso.setText("Cambios realizados con éxito.");
 				lblAviso.setForeground(Color.black);
 				dlgAviso.setBackground(Color.green);
 				dlgAviso.setVisible(true);

@@ -24,7 +24,7 @@ public class ModificarCliente implements ActionListener, WindowListener {
 	Label lblCambiarDatos = new Label("Modifique los campos del Cliente");
 	Label lblNombreNuevo = new Label("Nuevo nombre:");
 	TextField txtNombreNuevo = new TextField(10);
-	Label lblTelefonoNuevo = new Label("Nuevo telÃ©fono:");
+	Label lblTelefonoNuevo = new Label("Nuevo teléfono:");
 	TextField txtTelefonoNuevo = new TextField(10);
 	Label lblCorreoNuevo = new Label("Nuevo correo:");
 	TextField txtCorreoNuevo = new TextField(10);
@@ -192,7 +192,7 @@ public class ModificarCliente implements ActionListener, WindowListener {
 			// --- If user clic to cancel modification button ---
 		} else if (e.getSource().equals(btnCancelarModificacion)) {
 
-			lblAviso.setText("ModificaciÃ³n de Servicio cancelada.");
+			lblAviso.setText("Modificación de Servicio cancelada.");
 			dlgAviso.setVisible(true);
 
 			valorDialogo = 2;
@@ -221,7 +221,7 @@ public class ModificarCliente implements ActionListener, WindowListener {
 
 				// --- If the SQL statement executed correctly ---
 				// --- Show success dialog ---
-				lblAviso.setText("Cambios realizados con Ã©xito.");
+				lblAviso.setText("Cambios realizados con éxito.");
 				lblAviso.setForeground(Color.black);
 				dlgAviso.setBackground(Color.green);
 				dlgAviso.setVisible(true);

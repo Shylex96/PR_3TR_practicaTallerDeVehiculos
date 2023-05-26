@@ -22,7 +22,7 @@ public class AltaCliente implements ActionListener, WindowListener{
 	// --- Labels, TextFields & Buttons components declared ---
 	Label lblNombreCliente = new Label ("Nombre del Cliente:");
 	TextField txtNombreCliente = new TextField (15);
-	Label lblTelefonoCliente = new Label ("TelÃ©fono del Cliente:");
+	Label lblTelefonoCliente = new Label ("Teléfono del Cliente:");
 	TextField txtTelefonoCliente = new TextField (15);
 	Label lblEmailCliente = new Label ("Email del Cliente:");
 	TextField txtEmailCliente = new TextField (15);
@@ -163,7 +163,7 @@ public class AltaCliente implements ActionListener, WindowListener{
 			if (txtNombreCliente.getText().equals("")) {
 
 				valorDialogo = 2;
-				lblAviso.setText("El campo de nombre no puede estar vacÃ­o.");
+				lblAviso.setText("El campo de nombre no puede estar vacío.");
 				dlgWindow.setVisible(true);
 			}
 
@@ -171,7 +171,7 @@ public class AltaCliente implements ActionListener, WindowListener{
 			else if (txtTelefonoCliente.getText().equals("") && txtEmailCliente.getText().equals("")) {
 
 				valorDialogo = 2;
-				lblAviso.setText("Debe estar relleno algÃºn campo de contacto.");
+				lblAviso.setText("Debe estar relleno algún campo de contacto.");
 				dlgWindow.setVisible(true);
 			}
 
@@ -179,7 +179,7 @@ public class AltaCliente implements ActionListener, WindowListener{
 
 				if (!txtTelefonoCliente.getText().matches("^[0-9]{9}")) {
 					valorDialogo = 2;
-					lblAviso.setText("El telÃ©fono debe contener 9 nÃºmeros.");
+					lblAviso.setText("El teléfono debe contener 9 números.");
 					dlgWindow.setVisible(true);
 				} 
 				else {

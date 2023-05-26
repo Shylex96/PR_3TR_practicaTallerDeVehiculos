@@ -111,7 +111,7 @@ public class BajaServicio implements ActionListener, WindowListener {
 
 				// --- Set positions and text ---
 				lblAviso.setBounds(10, 30, 330, 25);
-				lblAviso.setText(" • ¿Seguro de eliminar : " +choServicios.getSelectedItem()+ "?"); // ASCII 7
+				lblAviso.setText("• ¿Seguro de eliminar : " +choServicios.getSelectedItem()+ "?"); // ASCII 7
 				dlgAviso.add(lblAviso);
 
 				btnSI.setBounds(100, 60, 50, 25);

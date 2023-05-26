@@ -32,7 +32,7 @@ public class ListadoCliente implements ActionListener, WindowListener {
 	Frame windowListadoClientes = new Frame("Listado de Clientes");
 	Label lblIdCliente = new Label ("ID:");
 	Label lblNombreCliente = new Label ("Nombre:");
-	Label lblTelefonoCliente = new Label ("TelÃ©fono:");
+	Label lblTelefonoCliente = new Label ("Teléfono:");
 	Label lblEmailCliente = new Label ("Email:");
 	TextArea areaDatos = new TextArea (10, 35);
 	Button btnPDF = new Button ("PDF");
@@ -123,7 +123,7 @@ public class ListadoCliente implements ActionListener, WindowListener {
 				// Create table headers
 				Cell headerCell1 = createCell("ID:");
 				Cell headerCell2 = createCell("Nombre:");
-				Cell headerCell3 = createCell("TelÃ©fono:");
+				Cell headerCell3 = createCell("Teléfono:");
 				Cell headerCell4 = createCell("Email:");
 
 				// Add header cells to the table

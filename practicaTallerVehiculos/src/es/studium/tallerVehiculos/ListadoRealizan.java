@@ -29,7 +29,7 @@ public class ListadoRealizan implements ActionListener, WindowListener {
 	// Destination File
 	public static final String DEST = "Listado_Realizan.pdf";
 
-	Frame windowListadoClientes = new Frame("Listado de RealizaciÃ³n");
+	Frame windowListadoClientes = new Frame("Listado de Realización");
 	Label lblIdCliente = new Label ("Cliente:");
 	Label lblIdServicio = new Label ("Servicio:");
 	Label lblTiempoEmpleado = new Label ("Tiempo:");
@@ -122,7 +122,7 @@ public class ListadoRealizan implements ActionListener, WindowListener {
 				Cell headerCell1 = createCell("Cliente:");
 				Cell headerCell2 = createCell("Tipo de Servicio:");
 				Cell headerCell3 = createCell("Tiempo Empleado:");
-				Cell headerCell4 = createCell("Fecha de RealizaciÃ³n:");
+				Cell headerCell4 = createCell("Fecha de Realización:");
 
 				// Add header cells to the table
 				table.addHeaderCell(headerCell1);

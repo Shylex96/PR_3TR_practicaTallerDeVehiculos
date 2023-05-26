@@ -21,7 +21,7 @@ public class AltaServicio implements ActionListener, WindowListener{
 	// --- Labels, TextFields & Buttons components declared ---
 	Label lblTipoServicio = new Label ("Tipo de Servicio:");
 	TextField txtTipoServicio = new TextField (15);
-	Label lblDescripcionServicio = new Label ("DescripciÃ³n del Servicio:");
+	Label lblDescripcionServicio = new Label ("Descripción del Servicio:");
 	TextField txtDescripcionServicio = new TextField (15);
 	Label lblPrecioServicio = new Label ("Precio del Servicio:");
 	TextField txtPrecioServicio = new TextField (15);
@@ -165,7 +165,7 @@ public class AltaServicio implements ActionListener, WindowListener{
 			if (txtTipoServicio.getText().equals("") || txtDescripcionServicio.getText().equals("") || txtPrecioServicio.getText().equals("")) {
 
 				valorDialogo = 2;
-				lblAviso.setText("No puede haber campos vacÃ­os.");
+				lblAviso.setText("No puede haber campos vacíos.");
 				dlgWindow.setVisible(true);
 
 			} else if (!txtPrecioServicio.getText().equals("")) {

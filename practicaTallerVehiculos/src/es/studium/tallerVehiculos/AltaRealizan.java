@@ -18,7 +18,7 @@ import java.util.Calendar;
 public class AltaRealizan implements ActionListener, WindowListener, ItemListener {
 
 	// --- General components ---
-	Frame windowAltaRealizan = new Frame("Alta de RealizaciÃ³n");
+	Frame windowAltaRealizan = new Frame("Alta de Realización");
 
 	// --- Labels, TextFields & Buttons components declared ---
 	Label lblNombreCliente = new Label ("Cliente:");
@@ -30,12 +30,12 @@ public class AltaRealizan implements ActionListener, WindowListener, ItemListene
 	Choice choHoras = new Choice();
 	Label lblMinutos = new Label("Minutos:");
 	Choice choMinutos = new Choice();
-	Label lblFecha = new Label("Fecha de realizaciÃ³n:");
-	Label lblDia = new Label("DÃ­a:");
+	Label lblFecha = new Label("Fecha de realización:");
+	Label lblDia = new Label("Día:");
 	Choice choDia = new Choice();
 	Label lblMes = new Label("Mes:");
 	Choice choMes = new Choice();
-	Label lblAnio = new Label("AÃ±o:");
+	Label lblAnio = new Label("Año:");
 	Choice choAnio = new Choice();
 
 	Button btnAceptar = new Button ("Aceptar");
@@ -219,7 +219,7 @@ public class AltaRealizan implements ActionListener, WindowListener, ItemListene
 		if (e.getSource().equals(btnCancelar)) {
 
 			valorDialogo = 1;
-			lblAviso.setText("Alta de RealizaciÃ¯Â¿Â½n cancelada.");
+			lblAviso.setText("Alta de Realización cancelada.");
 			dlgWindow.setVisible(true);
 		}
 
